@@ -1,5 +1,5 @@
 # Duke Datathon 2021 💻💙 <img width=90 align="right" src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e6/Duke_University_logo.svg/1024px-Duke_University_logo.svg.png">
-This is the repo for Duke's Annual Datathon, 2021.
+This is the repo for the Duke Annual Datathon, 2021.
 
 
 ## Team Members
