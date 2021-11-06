@@ -1,0 +1,1743 @@
+******************************************************
+**                                                ****
+** Asian Barometer Wave 2 (2005-2008) Codebook    ****
+**         Version 1                              ****
+**         2017.03.07                             ****
+****************************************************** 
+
+   COUNTRY 'Country code'
+
+     1 'Japan
+     2 'Hong Kong
+     3 'Korea
+     4 'China'
+     5 'Mongolia'
+     6 'Philippines'
+     7 'Taiwan'
+     8 'Thailand'
+     9 'Indonesia'
+    10 'Singapore'
+    11 'Vietnam'
+    12 'Cambodia'
+    13 'Malaysia'
+  
+   IDNUMBER 'Interview Numbers'
+
+   Level3 'Urban-rural'
+   
+
+*************************************************************************************
+                                ECONOMIC EVALUATION
+*************************************************************************************
+
+   Q1    'How would you rate the overll economic condition of our country today?'
+
+     1 'Very bad'
+     2 'Bad'
+     3 'So-so [not good nor bad]'
+     4 'Good'
+     5 'Very good'
+     8 "Can't choose"
+     9 'Decline to answer' 
+
+
+   Q2    'How would you dsecribe the change in the economic condition of our country over the last few years?'
+
+     1 'Much worse'
+     2 'A little worse'
+     3 'About the same'
+     4 'A little better'
+     5 'Much better'
+     8 "Can't choose"
+     9 'Decline to answer' 
+
+
+   Q3    'What do you think will be the state of our country's economic condition a few years from now?'
+
+     1 'Much worse'
+     2 'A little worse'
+     3 'About the same'
+     4 'A little better'
+     5 'Much better'
+     8 "Can't choose"
+     9 'Decline to answer' 
+
+
+   Q4    'As for your own family, how do you rate the economic situation of your family today?'
+
+     1 'Very bad'
+     2 'Bad'
+     3 'So-so [not good nor bad]'
+     4 'Good'
+     5 'Very good'
+     8 "Can't choose"
+     9 'Decline to answer' 
+
+
+   Q5    'How would you compare the current economic condition of your family with what it was a few years ago?'
+
+     1 'Much worse now'
+     2 'A little worse now'
+     3 'About the same'
+     4 'A little better now'
+     5 'Much better now'
+     8 "Can't choose"
+     9 'Decline to answer' 
+
+   Q6    'What do you think the economic situation of your family will be a few years from now?'
+
+     1 'Much worse'
+     2 'A little worse'
+     3 'About the same'
+     4 'A little better'
+     5 'Much better'
+     8 "Can't choose"
+     9 'Decline to answer' 
+
+
+**********************************************************************************
+                     TRUST IN POLITICAL INSTITUTIONS
+**********************************************************************************
+
+   Q7 'Trust in the excutive office (president or prime minister)'*
+   Q8 'The courts'
+   Q9 'National government in the capital city'
+   Q10 'Political parties'
+   Q11 'Parliament'
+   Q12 'Civil service'
+   Q13 'The military'
+   Q14 'The police'
+   Q15 'Local government
+   Q16 '16 Newspaper'**
+   Q17 '17 Television'**
+   Q18 '18 The election commission'**+
+   Q19 '19 Non-government organizations or NGOs'++**
+
+     1 'None at all'
+     2 'Not very much trust'
+     3 'Quite a lot of trust'
+     4 'A great deal of trust'
+     7 'Do not understand the question'
+     8 "Can't choose"
+     9 'Decline to answer' /
+
+* Not asked in China
+** Not asked in Cambodia
++ Not asked in Hong Kong, South Korea, and China
+++ Not asked in Hong Kong, South Korea and Taiwan 
+
+
+*********************************************************************************************
+                           SOCIAL CAPITAL
+*********************************************************************************************
+   Q20 Are you a member of any organization or formal groups?*
+       1 'Yes'
+       2 'No'
+       8 'Can't choose'
+       9 'Decline to answer'
+
+   Fgnum Number of formal group*
+   
+     0 'None'
+     1 'One'
+     2 'Two'
+     3 'Three'
+     98 'Not applicable'
+      
+   Q20_1 Name of the organization you belong to. First'
+   Q20_2 Name of the organization you belong to. Second'
+   Q20_3 Name of the organization that you belong to. Third'
+
+     1 'Political parties'
+     2 'Residential & community associations'
+     3 'Religious groups'
+     4 'Sports/recreational clubs'
+     5 'Culture organizations'
+     6 'Charities'
+     7 'Public interest groups(exc.)'
+     8 'Labor unions'
+     9 'Farmer unions or agricultural associations'
+     10 'Professional organizations'
+     11 'Business associations'
+     12 'Parent-Teacher associations or PTA'
+     13 'Producer cooperatives'
+     14 'Consumer cooperatives'
+     15 'Alumni associations'
+     16 'Candidate support organizations'
+     17 'Other occupational organizations(etc.)'
+     18 'Other volunteer organizations'
+     19 'Hometown associations(others)'
+     20 'Clan associations(others)'
+     90 'Not a member of any organization or group'
+     98 'Not applicable'
+     99 'No more answer'
+
+   Q23 'General speaking, would you say that "Most people can be trusted" or "that you must be very careful 
+         in dealing with people"?'
+
+     1 'You must be very careful in dealing with people'
+     2 'Most people can be trusted'
+     7 'Do not understand the question'
+     8 "Can't choose"
+     9 'Decline to answer' /
+
+
+   Q24 'How much trust do you have in esch of the following types of people? "Your relatives" '
+   Q25 'How much trust do you have in esch of the following types of people? "Your neighbors" '
+   Q26 'How much trust do you have in esch of the following types of people? "Other people you interact with" '**
+
+     1 'None At All'
+     2 'Not Very Much Trust'
+     3 'Quite A Lot Of Trust'
+     4 'A Great Deal Of Trust'
+     7 'Don't Understand'
+     8 'Can¥Œt choose'
+     9 'Decline to answer'/
+
+
+   Q27 'On average, about how many people do you have contact with in a typical week day?  We are interested in contact on a one-on-one basis, including everyone with whom you chat, talk, or discuss matters.  This can be face to face, by telephone, by mail, or on the internet.  Please include only people you know.'+
+
+     0 'Not applicable'
+     1 '0-4 people'
+     2 '5-9 people'
+     3 '10-19 people'
+     4 '20-49 people'
+     5 '50 or more people'
+     8 "Can't choose"
+     9 'Decline to answer' /
+
+
+   Q28 'Some people because of their job, position in the community or contacts, are asked by others to help influence important decisions in their favor.  What about you?  How often are you asked to help influence important decisions in other people¥Œs favor?'+
+     
+     1 'Never'
+     2 'Seldom'
+     3 'Occasionally'
+     4 'Often'
+     7 'Don't Understand'
+     8 'Can¥Œt choose'
+     9 'Decline to answer'/
+   
+   Q29 'And are there people you could ask to help influence important decisions in your favor?'+
+ 
+     1 'No, nobody'
+     2 'Yes, a few'
+     3 'Yes, some'
+     4 'Yes, a lot'
+     7 'Do not understand the question'
+     8 "Can't choose"
+     9 'Decline to answer' /
+
+   Q30 'Do you agree or disagree with the following statement: By helping people in trouble today, someone else will help me when I am in trouble someday.'+
+
+     1 'Agree'
+     2 'Somewhat agree'
+     3 'Somewhat disagree'
+     4 'Disagree'
+     5 'Neither agree nor disagree'
+     7 'Don't Understand '
+     8 'Can¥Œt choose'
+     9 'Decline to answer'
+
+   Q31 'Would you have a hard time conversing with your friends or co-workers about politics if you had differing opinions?'++
+
+     1 'Very hard'
+     2 'A bit hard'
+     3 'Not too hard'
+     4 'Not hard at all'
+     7 'Don't Understand '
+     8 'Can¥Œt choose'
+     9 'Decline to answer' /
+
+*  Not asked in Cambodia
+** Not asked in Hong Kong
++  Not asked in Hong Kong and Cambodia
+++ Not asked in Hong Kong, South Korea, Singapore, and Cambodia
+
+
+**********************************************************************************************
+                    HUMAN SECURITY
+**********************************************************************************************
+
+   Q32 'Generally speaking, how safe is living in this city/ town/ village ¥V very safe, safe, unsafe or very unsafe? '
+
+     1 'Very safe'
+     2 'Safe'
+     3 'Unsafe'
+     4 'Very unsafe'
+     7 'Do not understand the question'
+     8 'Can¥Œt choose'
+     9 'Decline to answer'
+
+   Q33 'Compared to the situation in this city/town/village a few years ago, do you now feel more safe, less safe or the same as before? '*
+
+     1 'More safe'
+     2 'Less safe'
+     3 'Same as before'
+     0 'Not applicable'
+     8 'Can¥Œt choose'
+     9 'Decline to answer'
+
+   Q34 'In the past 12 months, have you or any member of your family been a victim of car, motorcycle or bicycle theft?'**
+
+     0 'Don't own any vehicle'
+     1 'No'
+     2 'Yes'
+     8 'Can¥Œt choose'
+     9 'Decline to answer'
+
+   Q35 'pick-pocketing/robbery of personal property?'**
+   Q36 'break-in at your home?'**
+   Q37 'physical violence?'**
+
+     0 'Not applicable'
+     1 'No'
+     2 'Yes'
+     8 'Can¥Œt choose'
+     9 'Decline to answer'
+
+*   Not asked in Hong Kong
+**  Not asked in Hong Kong, South Korea, and Singapore
+
+
+**********************************************************************************************
+                    PARTICIPATION IN ELECTIONS
+**********************************************************************************************
+
+   Q38 'In talking to people about elections, we often find that a lot of people were not able to vote because they were away from home, they were sick or they just didn¥Œt have time. How about you? Did you vote in the election [the most recent national election, parliamentary or presidential] held in [year]'*
+
+     0 'Not applicable'
+     1 'No'
+     2 'Yes'
+     8 'Can¥Œt choose'
+     9 'Decline to answer'
+ 
+   Q39  'Which parties (or candidates for president if it was presidential race) did you vote 
+        for?'*
+
+     90 'Not applicable'
+     95 'No answer'
+     96 'Forgot'
+     97 'Do not know'
+     98 "Can't choose"
+     99 'Decline to answer'
+
+     JAPAN
+     101 'LDP'
+     102 'DPJ'
+     103 'Komeito(CGP)'
+     104 'SDP'
+     105 'JCP'
+     106 'other party'
+     107 'Independent'
+     110 'no information'
+     111 'voted in blank'
+
+     KOREA
+     301 'The Uri Party(governing party)'
+     302 'The Grand National Party'
+     303 'The Democratic Party'
+     304 'The United Liberal Democrats'
+     305 'The Democratic Labor Party'
+     306 'Other Parties'
+     307 'Independent'
+
+     MONGOLIA
+     501 'N. Enhbayar'
+     502 'M. Enhsaikhan'
+     503 'B. Jargalsaikhan'
+     504 'B. Erdenebat'
+
+     PHILIPPINES
+     601 'LACSON, PANFILO'
+     602 'MACAPAGAL-ARROYO, GLORIA'
+     603 'POE, FERNANDO JR.'
+     604 'ROCO, RAUL'
+     605 'VILLANUEVA, EDUARDO'
+
+     TAIWAN
+     701 'Shui-bian Chen and Annette Lu'
+     702 'Chan Lien and James Soong'
+
+     THAILAND
+     801 'THAI RAK THAI'
+     802 'Other Party'
+     803 'Vote for no vote'
+     804 'Non-valid vote'
+
+     INDONESIA
+     901 'Indonesian National Party Marhaenism'
+     902 'Social Democrat Labour Party'
+     903 'Crescent Star Party'
+     905 'United Development Party'
+     906 'United Democratic Nationhood Party'
+     907 'New Indonesia Union Party'
+     908 'Freedom Bull National Party'
+     909 'Democrat Party'
+     910 'Justice and Unity Party'
+     911 'Indonesian Democratic Vanguard Party'
+     912 'Indonesian United Renaissance People Party'
+     913 'National Mandate Party'
+     914 'Concern for thel Nation Functional Party'
+     915 'National Awakening Party'
+     916 'Prosperous and Justice Party'
+     917 'Reform Star Party'
+     918 'Indonesian Democratic Party-Struggle'
+     919 'Peace and Prosperous Party'
+     920 'Functional Group Party'
+     921 'Patriot Pancasila Party'
+     922 'Indonesian Association Party'
+     924 'Vanguard Party'
+
+
+     MALAYSIA 
+     1301 'Barisan Nasional'
+     1302 'UMNO'
+     1303 'MCA'
+     1304 'MIC'
+     1305 'Gerakan'
+     1306 'PBS'
+     1307 'PBB'
+     1308 'SUPP'
+     1309 'Other BN party'
+     1310 'Opposition'
+     1311 'PAS'
+     1312 'DAP'
+     1313 'PKR'
+     1314 'Other'
+
+* Hong Kong, China, Singapore, Vietnam, and Cambodia didn't ask this question.
+
+   Q39a 'Based on the answer to Q39, please construct a new variable indicating if the respondent voted for the winning camp or loosing camp.* 
+
+     1 'Voted for the winning camp'
+     2 'Voted for the losing camp'
+     0 'Not applicable'
+     99 'Decline to answer'
+
+*Hong Kong, Singapore, Vietnam, and Cambodia didn't have this question. 
+
+   Q40-42 Thinking about the national election in [year], did you...   
+
+   Q40 'attend a campaign meeting or rally?'*
+   Q41 'try to persuade others to vote for a certain candidate or party?'**
+   Q42 'Did you do anything else to help out or work for a party or candidate running in the election?'+
+             
+     0 'Not applicable'
+     1 'No'
+     2 'Yes'
+     7 'Do not understand the question'
+     8 "Can't choose"
+     9 'Decline to answer' /
+
+*  This question was not asked in Cambodia.
+** This question was not asked in Vietnam and Cambodia.
++  This question was not asked in Korea, China, Vietnam, and Cambodia.
+
+
+   Q43 'On the whole, how would you rate the freeness and fairness of the last national election, held in [year]. Was it: '*
+
+     1 'Completely free and fair'
+     2 'Free and fair, but with minor problem'
+     3 'Free and fair, with major problem'
+     4 'Not free or fair'
+     0 'Not applicable'
+     8 'Can't choose'
+     9 'Decline to answer'
+
+*  This question was not asked in Cambodia. 
+
+
+******************************************************************************************
+                           ACCESS TO PUBLIC SERVICE
+******************************************************************************************
+
+   Q44-47 Based on your experience, how easy or difficult is it to obtain the following services? Or do you never try and get these service from government?*
+
+   Q44 'An identity document (such as a birth certificate or passport)
+   Q45 'A place in a public primary school for a child
+   Q46 'Medical treatment at a nearby clinic'
+   Q47 'Help from the police when you need it'
+
+     0 'Not applicable'
+     1 'Very difficult'
+     2 'Difficult'
+     3 'Easy'
+     4 'Very easy'
+     5 'Never tried'
+     7 'Do not understand the question' 
+     8 "Can't choose"
+     9 'Decline to answer' /
+
+* Hong Kong and Korea didn't ask these four questions.
+
+
+**********************************************************************************************
+                                PSYCHOLOGICAL INVOLVEMENT
+**********************************************************************************************
+   Q48 'How would you describe the present political situation in our country? (NEW)'*
+
+     1 'Very good'
+     2 'Good'
+     3 'Average'
+     4 'Bad'
+     5 'Very bad'
+     8 'Can¥Œt choose'
+     9 'Decline to answer'
+
+
+   Q49 'How interested would you say you are in politics?'
+
+     1 'Not at all interested'
+     2 'Not very interested'
+     3 'Somewhat interested'
+     4 'Very interested'
+     7 'No answer'
+     8 'Can¥Œt choose'
+     9 'Decline to answer'
+
+
+
+   Q50 'How often do you follow news about politics and government?'*
+
+     1 ' Practically never'
+     2 ' Not even once a week'
+     3 ' Once or twice a week'
+     4 ' Several times a week'
+     5 ' Everyday'
+     7 'No answer'
+     8 'Can¥Œt choose'
+     9 'Decline to answer'
+ 
+   51      'What is your main source of information about politics and government? <Allow multiple response>  
+   Q51_1   '51_1.Televsion'**
+   Q51_2   '51_2.Newspaper'**
+   Q51_3   '51_3.Radio'**
+   Q51_4   '51_4.Internet'**
+   Q51_5   '51_5.Cell phone short message'**
+   Q51_6   '51_6.Personal contact'**
+   Q51_7   '51_7.Other_____________'***
+   Q51_8   '51_8.Magazine'+
+
+     1 'Yes'
+     2 'No'
+     8 'Can't choose'
+     9 'Decline to answer'
+     90 'Not applicable'
+
+   Q51a 'Which is most important? (NEW)'++
+     01 'Television'
+     02 'Newspaper'
+     03 'Radio'
+     04 'Internet'
+     05 'Cell phone short message'
+     06 'Personal contact'
+     07 'Other                                 .'
+     08 'Magazine'
+     11 'International TV'
+     90 'Not applicable'
+     98 'Can¥Œt choose'
+     99 'Decline to answer'
+
+   Q52 'When you get together with your family members or friends, how often do you discuss political matters?(NEW)'
+     1 'Frequently'
+     2 'Occasionally'
+     3 'Never'
+     7 'No answer'
+     8 'Can¥Œt choose'
+     9 'Decline to answer'
+
+   Q53 'How much impact do you feel government policies have on your daily life? (Hong Kong: Beijing government)'*
+     1 'No impact at all'
+     2 'A little impact'
+     3 'Quite some impact'
+     4 'A great deal of impact'
+     7 'No answer'
+     8 'Can¥Œt choose'
+     9 'Decline to answer'
+
+*   Not asked in Cambodia
+**  Not asked in Hong Kong, Korea, and Cambodia
+*** Not asked in Hong Kong, Korea, Mongolia, Indonesia, and Cambodia
++   Only asked in Malaysia
+++  Not asked in Hong Kong and Cambodia 
+
+
+***********************************************************************************************
+                                 PARTISANSHIP
+***********************************************************************************************
+
+   Q54 'Among the political parties listed here, which party if any do you feel closest to?'*
+
+    Japan
+    101 'LDP'
+    102 'DPJ'
+    103 'Komeito(CGP)'
+    104 'SDP'
+    105 'JCP'
+    106 'other party'
+      
+    Hong 'Kong'
+    201 'Democratic Party'
+    202 'DAB'
+    203 'Liberal Party'
+    204 'Civic Party'
+    205 'Frontier'
+    206 'ADPL'
+    207 'League of Social Democrats'
+    211 'The Hong Kong Federation of Trade Union'
+    212 'Neighbourhood & Worker's Service Centre'
+    213 'Pan-democratic'
+    214 'Right Wing'   
+   
+    Korea
+    301 'The Uri Party(governing party)'
+    302 'The Grand National Party'
+    303 'The Democratic Party'
+    304 'The Democratic Labor Party'
+    305 'The People First Party'
+    306 'Other Parties'
+      
+    Mongolia
+    501 'MPRP'
+    502 'DP'
+    503 'CCP'
+    504 'MP'
+    505 'RP'
+    506 'PP'
+    507 'other'
+   
+    Philippines
+    601 'LABAN NG DEMOKRATIKONG PILIPINO'
+    602 'LAKAS-NUCD-UMDP'
+    603 'LIBERAL PARTY'
+    604 'NACIONALISTA PARTY'
+    605 'NATIONALIST PEOPLE'S COALITION'
+    606 'PARTIDO NG MASANG PILIPINO'
+    607 'PDP-LABAN'
+    608 'GABRIELA'
+    609 'KMP - KILUSAN NG MASANG PILIPINO (GRUPO NI FPJ)'
+    610 'GRUPO NI CORY AQUINO'
+    611 'PARTIDO NI LACSON'
+    612 'PARTIDO NI ROCO'
+    613 'ASIAN PACIFIC ELECTRONICS COOPERATIVES'
+    614 'PARTIDO NI EDDIE'
+    615 'PARTIDO NI VILLANUEVA'
+    616 'PARTIDO NI JOEY HIZON'
+    617 'PARTIDO NI MAYOR BELMONTE'
+    618 'BAYAN MUNA'
+    619 'PARTIDO NI ROILO GOLEZ'
+    620 'FILIPINO ALLIANCE MOVEMENT SUPPORT GROUP'
+    621 'MAYO UNO (LABOR UNION)'
+    622 'OPOSISYON'
+    623 'PARTIDO NI ESCUDERO'
+    625 'SANLAKAS'
+    626 'PARTIDO NI MAYOR OREA'
+    627 'MAYOR'S QUANO'
+    
+    Taiwan
+    701 'KMT'
+    702 'DPP'
+    703 'New Party'
+    704 'PFP'
+    705 'TSU'
+    706 'Other'
+
+    Thailand
+    801 'PRAJADHIPAT'
+    802 'THAI RAK THAI'
+    803 'CHART THAI'
+    804 'MAHACHON'
+    805 'Other Party'
+
+    Indonesia
+    901 'Indonesian National Party Marhaenism'
+    902 'Social Democrat Labour Party'
+    903 'Crescent Star Party'
+    905 'United Development Party'
+    907 'New Indonesia Union Party'
+    908 'Freedom Bull National Party'
+    909 'Democrat Party'
+    910 'Justice and Unity Party'
+    911 'Indonesian Democratic Vanguard Party'
+    912 'Indonesian United Renaissance People Party'
+    913 'National Mandate Party'
+    914 'Concern for thel Nation Functional Party'
+    915 'National Awakening Party'
+    916 'Prosperous and Justice Party'
+    917 'Reform Star Party'
+    918 'Indonesian Democratic Party-Struggle'
+    919 'Peace and Prosperous Party'
+    920 'Functional Group Party'
+    922 'Indonesian Association Party'
+
+    Vietnam
+    1101 'Vietnamese Communist Party'
+
+    Malaysia
+    1301 'BarisanNasional'
+    1302 'UMNO'
+    1303 'MCA'
+    1304 'MIC'
+    1305 'Gerakan'
+    1306 'PBS'
+    1307 'PBB'
+    1308 'SUPP'
+    1309 'Other BN party'
+    1310 'Opposition'
+    1311 'PAS'
+    1312 'DAP'
+    1313 'PKR'
+    1314 'Other'
+
+    95 'Cannot choose'
+    96 'Decline to answer'
+    97 'Do not know'
+    98 'No answer'
+    99 'Do not feel close to any political party'
+
+* Not asked in China, Singapore, and Cambodia
+
+    Q55 'How close do you feel to (answer in Q54)? Is it very close, somewhat close, or just a little close?'*
+ 
+     0.Not 'applicable'
+     1 'Just a little close'
+     2 'Somewhat close'
+     3 'Very close'
+     8.'Can't choose'
+     9.'Decline to answer'
+
+* Not asked in China, Singapore, and Cambodia
+
+
+***********************************************************************************************
+                                 TRADITIONALISM
+***********************************************************************************************
+
+    Q56 'Even if parents' demands are unreasonable, children still should do what they ask.'
+    Q57 'Being a student, one should not question the authority of their teacher. (NEW)'*
+    Q58 'When one has a conflict with a neighbor, the best way to deal with it is to accommodate the other person.'
+    Q59 'A person should not insist on his own opinion if his co-workers disagree with him. '*
+    Q60 'For the sake of the family, the individual should put his personal interests second. '
+    Q61 'Sometimes one has to follow one¥Œs own beliefs regardless of what other people think. (NEW)'*
+    Q62 'When dealing with others, securing one¥Œs immediate interests should be more important than developing a long-term relationship. (NEW)'
+    Q63 'Open quarrels (criticisms) among politicians are harmful to society. (NEW)'**
+    Q64 'The relationship between the government and the people should be like that between parents and children. (NEW)'**
+    Q65 'People should always support the decisions of their government even if they disagree with them. (NEW)'*
+
+
+     1 'Strongly Agree'
+     2 'Somewhat Agree'
+     3 'Somewhat Disagree'
+     4 'Strongly Disagree'
+     7 'Don't Understand'
+     8 'Can¥Œt choose'
+     9 'Decline to answer'
+
+*  Not asked in South Korea.
+** Not asked in Hong Kong
+
+
+**************************************************************************************************
+                                   GLOBALIZATION
+**************************************************************************************************
+
+    Q66 'How often do you use the internet? (NEW)'*
+
+     1 'Almost daily'
+     2 'At least once a week '
+     3 'At least once a month'
+     4 'Several times a year'
+     5 'Hardly ever'
+     6 'Never'
+     7 'Do not understand the question'
+     8 'Cannot choose'
+     9 'Decline to answer'
+     0 'Not aware of internet'
+
+    Q67 'How closely do you follow major events in foreign countries / the world? (NEW)'*
+
+     1 'Very closely'
+     2 'Somewhat closely'
+     3 'Not too closely'
+     4 'Very little'
+     5 'Not at all'
+     7 'No answer'
+     8 'Can¥Œt choose'
+     9 'Decline to answer'
+
+    Q68 'Have you traveled abroad before? If you have, how often do you travel abroad? (NEW)'*
+
+     1 'A few times a year'
+     2 'Almost once a year'
+     3 'Just a few times in my whole life'
+     4 'Just once in my whole life'
+     5 'Never'
+     7 'No answer'
+     8 'Can¥Œt choose'
+     9 'Decline to answer'
+
+    Q69 'How often do you have personal contact with foreigners, including those living in your country? <Optional> (NEW)'**
+     1 'Almost daily'
+     2 'At least once a week'
+     3 'At least once a month'
+     4 'Several times a year'
+     5 'Hardly ever'
+     6 'Never'
+     7 'No answer'
+     8 'Can¥Œt choose'
+     9 'Decline to answer'
+
+*  Not asked in Cambodia
+** Not asked in Korea, China, Singapore, and Cambodia
+
+
+**************************************************************************************************
+                           AGREEMENT/ DISAGREEMENT WITH SPECIFIC STATEMENTS
+**************************************************************************************************
+
+    Q70 'We should give up gains in the present for the possibility of larger gains in the future. (NEW)'**
+    Q71 'Conflict among political groups is not a bad thing for our country. (NEW)'**
+    Q72 'If a government policy serves the interests of the majority of people, I should support it even if it jeopardizes my private interests.(NEW)'**
+    Q73 'The best way to deal with complicated political issues should be to leave them to the future. (NEW)'*
+    Q74 'Political reform should be introduced little-by-little instead of all-at-once. (NEW)'**
+    Q75 'Cruel criminals should be punished immediately without regard to time-consuming legal processes. (NEW)'*
+    Q76 'For the sake of the national community/society, the individual should be prepared to sacrifice his/her personal interest. '
+    Q77 'The most important thing for political leaders is to accomplish their goals even if they have to ignore the established procedure.'*
+    Q78 'If possible, I don¥Œt want to get involved in political matters. (NEW)'+
+
+     1 'Strongly Agree'
+     2 'Somewhat Agree'
+     3 'Somewhat Disagree'
+     4 'Strongly Disagree'
+     7 'Don't Understand'
+     8 'Can¥Œt choose'
+     9 'Decline to answer'
+
+*  Not asked in Cambodia
+** Not asked in South Korea and Cambodia
++  Not asked in Hong Kong, South Korea, and Cambodia
+
+
+**************************************************************************************************
+                                   POLITICAL PARTICIPATION
+**************************************************************************************************
+
+    79-85  'In the past three (3) years, have you never, once, or more than once done the following because of personal, family, or neighborhood problems, or problems with government officials and policies?
+ 
+    Q79    'Contacted government (administrative) official.'
+    Q80    'Contacted officials at higher level.'+++
+    Q81    'Contacted elected officials or legislative representatives at any level.'
+    Q82    'Contacted officials of political parties or other political organizations.'*
+    Q83    'Contacted representative of non-government/civil society organizations (farmers' associations, trade unions, religious groups, human rights groups, interests groups).'**
+    Q84    'Contacted traditional leaders/community leaders.<Optional>'++
+    Q85    'Contacted other influential people.'+
+
+     1 'Once'
+     2 'More than once'
+     3 'Never Done'
+     7 'No answer'
+     8 'Can't choose'
+     9 'Decline to answer'
+     90 'Not applicable'
+
+*   Not asked in Hong Kong
+**  Not asked in China
++   Not asked in Korea
+++  Not asked in Korea and China
++++ Not asked in Hong Kong, South Korea, China, Singapore, and Malaysia
+
+
+    86-89  Here is a list of actions that people sometimes take as citizens.  For each of these, please tell me whether you, personally, have never, once, or more than once done any of these things during the past three years. (New)    
+    
+    Q86    'Refused to pay taxes or fees to the government'*
+    Q87    'Got together with others to raise an issue or sign a petition'**
+    Q88    'Attended a demonstration or protest march'*
+    Q89    'Used force or violence for a political cause'**
+
+     1 'Once'
+     2 'More than once'
+     3 'Never Done'
+     7 'No answer'
+     8 'Can¥Œt choose'
+     9 'Decline to answer'
+     90 'Not applicable'
+
+*  Not asked in Hong Kong and Cambodia 
+** Not asked in Hong Kong, China, and Cambodia
+
+
+    Q90    'Thinking of whether you voted or not ever since you became eligible for voting, how would you describe yourself ¥Vhave you voted in every election, voted in most elections, voted in some elections or hardly ever voted?(NEW)'*
+     1 'Voted in every election'
+     2 'Voted in most elections'
+     3 'Voted in some elections'
+     4 'Hardly ever voted'
+     0 'Not applicable (eligible only once)'
+     8 'Can¥Œt choose'
+     9 'Decline to answer'
+
+* Not asked in Hong Kong, Korea, China, Singapore, and Cambodia
+
+
+*************************************************************************************************
+                                       SATISFACTION
+*************************************************************************************************
+
+    Q92  'People often differ in their views on the characteristic that is essential to democracy. If you have to choose only one of the things that I am going to read, which one would you choose as the most essential to a democracy? (Please read out options 1 to 4) (New)'
+     
+     0 'No answer'
+     1 'Opportunity to change the government through elections'
+     2 'Freedom to criticize those in power'
+     3 'A small income gap between rich and poor'
+     4 'Basic necessities like food, clothes and shelter etc. for everyone'
+     7 'Don't Understand'
+     8 'Can¥Œt choose'
+     9 'Decline to answer'
+
+    Q93  'On the whole, how satisfied or dissatisfied are you with the way democracy works in [Country].  Are you ¥K?'
+
+     1 'Not at all satisfied'
+     2 'Not very satisfied'
+     3 'Fairly satisfied'
+     4 'Very satisfied'
+     8 'Can¥Œt choose'
+     9 'Decline to answer'
+
+    Q94  'In your opinion how much of a democracy is [Country Name] ?  (Read out options. Only one option to be chosen.)'*
+
+     1 'A full democracy'
+     2 'A democracy, but with minor problems'
+     3 'A democracy, with major problems'
+     4 'Not a democracy'
+     7 'Don't Understand'
+     8 'Can¥Œt choose'
+     9 'Decline to answer'
+
+* Not asked in Hong Kong
+
+    95-97 Here is a scale: 1 means complete dictatorship and 10 means complete democracy.
+
+    Q95  'Where would you place our country on this scale during the period of [name of the most recent government under authoritarian rule]? '
+    Q96  'Where would you place our country under the present government?'
+    Q97  'To what extent would you want our country to be democratic now?'
+
+    1 complete dictatorship
+    2
+    3
+    4
+    5
+    6
+    7
+    8
+    9
+    10 'complete democracy'
+    97 'Don't Understand'
+    98 'Can't choose'
+    99 'Decline to answer'
+
+    Q98  'Here is a similar scale of 1 to 10 measuring the extent to which people think democracy is suitable for our country. If ¥§1¥¨ means that democracy is completely unsuitable for [name of country] today and ¥§10¥¨ means that it is  completely suitable, where would you place our country today?'
+
+    1 'Democracy is completely unsuitable'
+    2
+    3
+    4
+    5
+    6
+    7
+    8
+    9
+    10 'Democracy is perfectly suitable'
+    97 'Do not understand'
+    98 'Can't choose'
+    99 'Decline to answer'      
+
+    Q99  'How satisfied or dissatisfied are you with the [name of president, etc. ruling current] government?  Are you ¥K?'*
+
+     1 'Very satisfied'
+     2 'Somewhat satisfied'
+     3 'Somewhat dissatisfied'
+     4 'Very dissatisfied'
+     7 'No answer'
+     8 'Can¥Œt choose'
+     9 'Decline to answer'
+
+* Not asked in China and Singapore
+
+    Q100  'In your opinion, what are the most important problems facing this country that government should address? 
+    Q102a 'How likely is it that the government will solve the most important problem you identified [i.e., the first problem the respondent mentioned] within the next five years?* 
+     
+     0 'Not applicable'
+     1 'Very likely'
+     2 'Likely'
+     3 'Not very likely'
+     4 'Not at all likely'
+     7 'No answer'
+     8 'Can¥Œt choose'
+     9 'Decline to answer'
+
+* Not asked in Korea
+
+*************************************************************************************************
+                                    QUALITY OF¥@GOVERANCE 
+*************************************************************************************************
+
+    103-111 Now I am going to read to you a list of statements that describe how people often feel about the state of affairs in [country name]. Please tell me whether you strongly agree, somewhat agree, somewhat disagree, or strongly disagree with each of these statements.(New)    
+
+    Q103    'People have the power to change a government they don't like.'*
+
+    Q104    'Our current courts always punish the guilty even if they are high-ranking officials.'
+
+    Q105    'Political parties or candidates in our country have equal access to the mass media during the election period.'*
+    Q106    'Between elections, the people have no way of holding the government responsible for its actions.'**
+    Q107    'When the government breaks the laws, there is nothing the legal system can do.'**
+    Q108    'Everyone is treated equally by the government.'
+    Q109    'People have basic necessities like food, clothes, and shelter.'
+    Q110    'People are free to speak what they think without fear.'
+    Q111    'People can join any organization they like without fear.People are free to speak what they think without fear.'
+
+     1 'Strongly Agree'
+     2 'Somewhat Agree'
+     3 'Somewhat Disagree'
+     4 'Strongly Disagree'
+     7 'Don't Understand'
+     8 'Can¥Œt choose'
+     9 'Decline to answer'
+
+*  Not asked in China.
+** Not asked in Hong Kong.
+
+    Q112    'How often do government officials withhold important information from the public view?'
+    Q113    'How often do national government officials abide by the law? (Hong Kong: HK government)
+'
+    Q114    'How often do your think our elections offer the voters a real choice between different parties/candidates.'*
+
+     1 'Always'
+     2 'Most of the time '
+     3 'Occasionally'
+     4 'Rarely'
+     7 'Don't Understand'
+     8 'Can¥Œt choose'
+     9 'Decline to answer'
+
+*  Not asked in China
+
+    Q 115    'To what extent is the legislature capable of keeping the government in check?'
+
+     1 'Very capable'
+     2 'Capable'
+     3 'Not capable'
+     4 'Not at all capable'
+     7 'Don't Understand'
+     8 'Can¥Œt choose'
+     9 'Decline to answer'
+
+*  Not asked in China
+
+    Q116    'How well do you think the government responds to what people want?'
+
+     1 'Very responsive'
+     2 'Largely responsive'
+     3 'Not very responsive'
+     4 'Not responsive at all'
+     7 'Don't Understand'
+     8 'Can't choose'
+     9 'Decline to answer'
+
+    Q117    'How widespread do you think corruption and bribe-taking are in your local/municipal government?  Would you say ¥K? '*
+
+     1 'Almost everyone is corrupt '
+     2 'Most officials are corrupt'
+     3 'Not a lot of officials are corrupt'
+     4 'Hardly anyone is involved'
+     8 'Can¥Œt choose'
+     9 'Decline to answer'
+
+*  Not asked in Singapore
+
+    Q118    'How widespread do you think corruption and bribe-taking are in the national government [in capital city]?  Would you say ¥K?'*
+
+     1 'Almost everyone is corrupt '
+     2 'Most officials are corrupt '
+     3 'Not a lot of officials are corrupt'
+     4 'Hardly anyone is involved.'
+     7 'Don't Understand'
+     8 'Can¥Œt choose'
+     9 'Decline to answer'
+
+*  Not asked in Hong Kong
+
+    Q119    'Have you or anyone you know personally witnessed an act of corruption or bribe-taking by a politician or government official in the past year?'
+    Q119_1    'Personally witnessed '*
+    Q119_2    'Told about it by a family member who personally witnessed'*
+    Q119_3    'Told about it by a friend who personally witnessed'*
+
+     0 'Not Applicable'
+     1 'Yes (Witnessed)'
+     2 'No (Never Witnessed)'
+     7 'Don't Understand'
+     8 'Can¥Œt choose'
+     9 'Decline to answer'
+
+* Not asked in China and Cambodia
+
+    Q120    'In your opinion, is the government working to crackdown corruption and root out bribes? (NEW)'
+
+     0 'It is doing this effectively'
+     1 'It is doing its best'
+     2 'It is doing something'
+     3 'It is not doing much'
+     4 'Doing nothing'
+     7 'Don't Understand'
+     8 'Can¥Œt choose'
+     9 'Decline to answer'
+
+
+*************************************************************************************************
+                         DEMOCRACY LEGITIMACY AND PREFERENCE FOR DEMOCRACY
+*************************************************************************************************
+
+    Q121    'Which of the following statements comes closest to your own opinion?'
+
+     1 'For people like me, it does not matter whether we have a democratic or a nondemocratic regime'
+     2 'Under some circumstances, an authoritarian government can be preferable to a democratic one'
+     3 'Democracy is alwasys preferable to any other kind of government'
+     7 'Don't Understand'
+     8 'Can¥Œt choose'
+     9 'Decline to answer'
+
+    Q122    'Which of the following statements comes closer to your own view?'
+
+     1 'Democracy can not solve our society's problems.'
+     2 'Democracy is capable of solving the problems of our society. '
+     7 'Don't Understand'
+     8 'Can¥Œt choose'
+     9 'Decline to answer'
+
+    Q123    'If you had to choose between democracy and economic development, which would you say is more important?'
+
+     1 'Economic development is definitely more important  '
+     2 'Economic development is somewhat more important'
+     3 'Democracy is somewhat more important '
+     4 'Democracy is definitely more important '
+     5 'They are both equally important '
+     7 'Don't Understand'
+     8 'Can¥Œt choose'
+     9 'Decline to answer'
+
+*************************************************************************************************
+                           AGREEMENT /DISAGREEMENTWITH SPECIFIC STATEMENTS
+*************************************************************************************************
+
+    Q124    'We should get rid of parliament and elections and have a strong leader decide things. '
+    Q125    'Only one political party is allowed to stand for election and hold office.'*
+    Q126    'The army (military) should come in to govern the country'
+
+     1 'Strongly Approve'
+     2 'Approve'
+     3 'Disapprove'
+     4 'Strongly Disapprove'
+     7 'Don't Understand'
+     8 'Can¥Œt choose'
+     9 'Decline to answer'
+
+* Not asked in China
+
+    Q127    'I think I have the ability to participate in politics.'
+    Q128    'Sometimes politics and government seems so complicated that a person like me can¥Œt really understand what is going on.'
+    Q129    'Whatever its faults may be, our form of government is still the best for us.'
+    Q130    'You can generally trust the people who run our government to do what is right. (HK: Hong Kong government)'
+    Q131    'Generally speaking, we can trust the local government officials to do the right things. '*
+
+     1 'Strongly agree'
+     2 'Somewhat agree'
+     3 'Somewhat disagree'
+     4 'Strongly disagree'
+     7 'Don't Understand'
+     8 'Can¥Œt choose'
+     9 'Decline to answer'
+
+* Not asked in Hong Kong, Korea, and Singapore    
+
+    Q132    'Which of these two statements comes closer to your own view?'*
+
+     1 'It is essential that the [country] remains one nation'
+     2 'Parts of the [country] should be allowed to become fully separate states if they choose to'
+     7 'Don't Understand'
+     8 'Can¥Œt choose'
+     9 'Decline to answer'
+
+* Not asked in Korea, Singapore, and Cambodia
+
+*************************************************************************************************
+                           AUTHORITARIAN DEMOCRATIC VALUES
+*************************************************************************************************
+
+    Q133    'People with little or no education should have as much say in politics as highly-educated people.'
+    Q134    'Government leaders are like the head of a family; we should all follow their decisions.'
+    Q135    'The government should decide whether certain ideas should be allowed to be discussed in society.'
+    Q136    'Harmony of the community will be disrupted if people organize lots of groups.'
+    Q137    'When judges decide important cases, they should accept the view of the executive branch.'
+    Q138    'If the government is constantly checked [i.e. monitored and supervised] by the legislature, it cannot possibly accomplish great things.'
+    Q139    'If we have political leaders who are morally upright, we can let them decide everything.'
+    Q140    'If people have too many different ways of thinking, society will be chaotic.'
+    Q141    'When the country is facing a difficult situation, it is ok for the government to disregard the law in order to deal with the situation.'
+
+     1 'Strongly Agree'
+     2 'Somewhat Agree'
+     3 'Somewhat Disagree'
+     4 'Strongly Disagree'
+     7 'Don't Understand'
+     8 'Can¥Œt choose'
+     9 'Decline to answer'
+
+*************************************************************************************************
+                                IDEOLOGICAL CLEAVAGE
+*************************************************************************************************
+
+    Q142    'The government should maintain ownership of major state-owned enterprises.'*
+    Q143    'The local government should have more authority over local decisions than it does now.(NEW)'**
+    Q144    'Our country should defend our way of life instead of becoming more and more like other countries.'*
+    Q145    'In order to preserve social justice, the government should prevent the gap between rich and poor from growing any larger.(NEW)'*
+    Q146    'Our country should become more self-sufficient and less reliant on trade with other countries.(NEW)'**
+
+     1 'Strongly Agree'
+     2 'Somewhat Agree'
+     3 'Somewhat Disagree'
+     4 'Strongly Disagree'
+     7 'Don't Understand'
+     8 'Can¥Œt choose'
+     9 'Decline to answer'
+
+*  Not asked in Hong Kong and Cambodia
+** Not asked in Hong Kong, Singapore, and Cambodia
+
+*************************************************************************************************
+                                CITIZENSHIP
+*************************************************************************************************
+
+    Q147    'Let us suppose that you had to choose between being a ________ [R¥Œs CITIZENSHIP] and being a ________ [R¥Œs ETHNIC/REGIONAL GROUP], which of these do you feel most strongly attached to? <Optional> (NEW) (DELETE)'*
+
+     1 'R¥Œs CITIZENSHIP'
+     2 'R¥¨S ETHNIC/REGIONAL GROUP'
+     3 'R¥¨S ANOTHER IDENTITY'
+     7 'Do not understand the question'
+     8 'Can¥Œt choose'
+     9 'Decline to answer'
+
+* Not asked in Hong Kong, Korea, China, Mongolia, Singapore, and Cambodia
+
+    Q148    'These people [name the people identified in 148 by the respondent] should have the equal right to do whatever they want to do as other citizens.(NEW)'*
+    Q149    'They [name the people identified in 148 by the respondent] should enjoy the same right as other citizens to vote in the election of the top leader [China: government leaders].(NEW)'*
+    Q150    'Their [name the people identified in 148 by the respondent] basic well-being should be taken care of by the government to the same extent as other citizens.(NEW)'*
+    Q151    'A citizen who does not actively participate in the affairs of his local and national community is not performing his duties.(NEW)'**
+    Q152    'Citizens should always obey laws and regulations, even if they disagree with them.(NEW)'**
+    Q153    'A citizen should always remain loyal only to his country, no matter how imperfect it is or what wrong it has done."(NEW)'**
+
+     1 'Strongly Agree'
+     2 'Somewhat Agree'
+     3 'Somewhat Disagree'
+     4 'Strongly Disagree'
+     7 'Don't Understand'
+     8 'Can¥Œt choose'
+     9 'Decline to answer'
+
+*  Not asked in Japan, Hong Kong, Korea, China, Mongolia, Taiwan, Cambodia, and Malaysia
+** Not asked in Cambodia
+
+    Q154    'How proud are you to be a citizen of (COUNTRY)? Are you? (NEW)
+'
+
+     1 'Very proud'
+     2 'Somewhat proud'
+     3 'Not very proud'
+     4 'Not proud at all'
+     7 'Don't Understand'
+     8 'Can¥Œt choose'
+     9 'Decline to answer'
+
+    Q155    'Given the chance, how willing would you be to go and live in another country? (NEW)'
+
+     1 'Very willing'
+     2 'Willing'
+     3 'Not willing'
+     4 'Not willing at all'
+     7 'Don't Understand'
+     8 'Can¥Œt choose'
+     9 'Decline to answer'
+
+*************************************************************************************************
+                                 INTERNATIONAL RELATIONS
+*************************************************************************************************
+
+
+    156-159 'I¥Œm going to name a number of international organizations. For each one, please tell me have you read or heard of them. (NEW)
+ 
+    Q156    'The European Community or European Union'*
+    Q157    'The United Nations or UN'*
+    Q158    'International Monetary Fund or IMF'*
+    Q159    'World Bank'*
+
+     1 'Yes'
+     2 'No'
+     9 'Decline to answer'
+
+* Not asked in Hong Kong, Korea, China, Singapore, and Cambodia
+
+    160-163 'For each aware of, please let us know about your impression of the following organizations. Here is a scale:  1 means very bad and 10 means very good.  . Give it a grade from 1 to 10, being 1 very bad and 10 very good.
+
+    Q160    'The European Community or European Union'*
+    Q161    'The United Nations or UN'*
+    Q162    'International Monetary Fund or IMF'*
+    Q163    'World Bank'*
+
+     1 Very bad
+     2
+     3
+     4
+     5
+     6
+     7
+     8
+     9
+     10 Very good
+     90 'Not applicable'
+     97 'Don't Understand'
+     98 'Can¥Œt choose'
+     99 'Decline to answer'
+
+* Not asked in Hong Kong, Korea, China, Singapore, and Cambodia
+
+    164-166 'Using a similar scale, please let us know about your impressions of the following countries.  Give it a grade from 1 to 10, being 1 very bad and 10 very good.
+         
+    Q164    'United States'*
+    Q165    'China'*
+    Q166    'Japan'*
+
+     1 Very bad
+     2
+     3
+     4
+     5
+     6
+     7
+     8
+     9
+     10 Very good
+     90 'Not applicable'
+     97 'Don't Understand'
+     98 'Can¥Œt choose'
+     99 'Decline to answer'
+
+* Not asked in Hong Kong, Korea, China, and Cambodia (0313)
+
+****************************************************************************************************
+                             SOCIO-ECONOMIC BACKGROUND VARIABLES
+****************************************************************************************************
+   SE2 'se2 Gender'
+
+     1 'Male'
+     2 'Female'
+
+   SE3_1 'Birth year'
+   SE3_2 'Actual age'
+ 
+
+   SE4 'Marital Status'
+
+     1 'Single/never married'
+     2 'Married'
+     3 'Living-in as married'
+     4 'Widowed
+     5 'Separated/Married but separated/not living with legal spouse'
+     6 'Divorced'
+     9 'Decline to answer' 
+
+
+   SE5 'Education. What is your highest level of education?'
+
+     1 'No formal education'
+     2 'Incomplete primary/elementary'
+     3 'Complete primary/elementary'
+     4 'Incomplete secondary/high school: technical/vocational type'
+     5 'Complete secondary/high school: technical/vocational type'
+     6 'Incomplete secondary/high school'
+     7 'Complete secondary/high school'
+     8 'Some university education'
+     9 'University education completed'
+     10 'Post-graduate degree'
+     11 'Other'
+     97 'Do not understand the question'
+     98 'Can't choose'
+     99 'Decline to answer' 
+
+
+   SE5A 'se5a How many year of formal education have you received'
+
+     90 'Not applicable'
+     98 'Can't choose'
+     99 'Decline to answer' 
+
+
+   SE6 'Religion'
+
+     1 'Traditional folk religion (Shenism)'
+     10 'Roman Catholic'
+     20 'Protestant'
+     21 'Seventh Day Adventist'
+     22 'Baptist'
+     23 'Pentecostal'
+     24 'Evangelical'
+     25 'Epescopal'
+     26 'Methodist'
+     27 'Grace Gospel of Church'
+     28 'Jesus christle'
+     29 'Jesus chris is lord'
+     30 'Jews'
+     40 'Islam'
+     41 'Shia'
+     42 'Sunni'
+     50 'Hindu'
+     60 'Buddhist'
+     61 'Taoism and Buddhist'
+     62 'Tenrikyo'
+     63 'Buddhist, Roman Catholic and Protestant'
+     64 'Cosmology'
+     65 'Seicho'
+     70 'Other Asian religions'
+     71 'Sikhism'
+     72 'Iglesia Ni Cristo'
+     73 'Aglipayan'
+     74 'Born Again'
+     75 'Shinto'
+     76 'Taoism'
+     77 'I-Kuan Tao'
+     78 'Confucianism'
+     79 'Tiruray'
+     80 'Other'
+     81 'Jehovah Witness'
+     82 'Mormons'
+     83 'Dating Dann'
+     84 'Anglican'
+     85 'Baha'i'
+     86 'Animism'
+     87 'Soka association'
+     88 'Iglesia filipina independente'
+     90 'None'
+     98 'Can't choose'
+     99 'Decline to answer'/
+
+
+   SE7 'Religiosity. About how often do you practice religious service or rituals these days?'
+
+     1 'Several times a day'
+     2 'Once a day'
+     3 'Several times a week'
+     4 'Once a week'
+     5 'Several times a month'
+     6 'Once a month'
+     7 'Only during festivals (or several times a year)'
+     8 'Once a year'
+     9 'Less often'
+     10 'Practically never'
+     11 'No religion'
+     98 'Can't choose'
+     99 'Decline to answer' /
+
+
+   SE7A 'Would you describe yourself as very religious, moderately religious, lightly religious, not religious at all?'
+    
+     1 'Very religious'
+     2 'Moderately religious'
+     3 'Lightly religious'
+     4 'Not religious at all'
+     7 'Don't understand'
+     8 'Don't know/Can't choose'
+     9 'Decline to answer' /.
+
+
+   SE8b 'How many people live in this household?'
+
+     1 One generation
+     2 Two generation
+     3 Three generation
+     4 More than three generation
+     8 Don't know
+     9 Decline to answer	
+    
+   SE9  'ANNUAL OR MONTHLY HOUSEHOLD INCOME Here is a scale of household [fill in ¥§annual¥¨ or ¥§monthly¥¨] incomes. We would like to know in what group your household on average is, counting all wages, salaries, pensions, dividends and other incomes that come in before taxes and other deduction. Just give the letter of the group your household falls into.'
+     
+     1 lowest quintile
+     2 2nd quintile
+     3 3rd quintile
+     4 4th quintile
+     5 top quintile
+     97
+     98 Can't choose
+     99 Decline to answer
+
+   SE9a 'Does the total income of your household allow you to satisfactorily cover your needs? I will read out few statements about your income. Please tell me, which of the following statement is closest to your situation?'
+     1 'Our income covers the needs well, we can save '
+     2 'Our income covers the needs all right, without much difficulty'
+     3 'Our income does not cover the needs, there are difficulties.'
+     4 'Our income does not cover the needs at all, there are great difficulties.'
+     0 'Not applicable'
+     7 'Do not understand the question'
+     8 'Cannot choose'
+     9 'Decline to answer'
+
+   SE10 Do you or your family own the following?
+
+    SE10A    'Car/Jeep/Van'
+    SE10B    'Tractor '
+    SE10C    'Color or B/W Television'
+    SE10D    'Cable Television'
+    SE10E    'Scooter/ Motorcycle / Moped '
+    SE10F    'Telephone'
+    SE10G    'Mobile Telephone'
+    SE10H    'Electric fan/cooler'
+    SE10I    'Bicycle'
+    SE10J    'Radio/transistor'
+    SE10K    'Pumping set'
+    SE10L    'Fridge'
+    SE10M    'Camera'
+    SE10N    'Goats/Sheep'
+    SE10O    'Cows/Buffalo'
+
+     1 'Yes'
+     2 'No'
+
+    SE11    'LANGUAGE. <OPTIONAL and country specific> What language do you speak the most in the Home?  '
+
+     1 Only local language
+     2 Mostly local language
+     3 A mixture of local and official language
+     4 Mostly official language
+     5 Only official language
+     6 Others
+     9 Decline to answer
+
+    SE13    'SUBJECTIVE SOCIAL STATUS. People sometimes think of the social status of their families in terms of being high or low. Imagine a ladder with 10 steps. At step one stand the lowest status and step 10 stand the highest. Where would you place your family on the following scale?'
+
+     1 Lowest status
+     2  
+     3  
+     4  
+     5  
+     6  
+     7  
+     8  
+     9  
+     10 Highest status
+     97 Don't understand
+     98 Can't choose
+     99 Decline to answer
+
+    SE12A    'Main Occupation'
+
+     1  Hired Workers (Excluding unpaid family workers)
+     2  Employers and Self-Employed
+     3  Purely Property Owner
+     4  Unpaid family workers
+     5  Presently unemployed but LOOKING for Work
+     6  Presently unemployed and NOT LOOKING for Work
+     7  Never worked before
+     8  No answer
+     9  Decline to answer
+     10  Others
+     80  Respondent is also the Chief Wage Earner 
+
+****************************************************************************************************
+	                              Interview Record
+****************************************************************************************************
+
+   IR1 "Interviewer's number"
+
+
+   IR2 'Is this the first questionnaire you have completed?'*
+
+     1 'Yes'
+     2 'No' 
+
+* Not asked in Hong Kong, Korea, Philippines, Singapore, and Cambodia
+
+   IR2A 'Interviewer's gender'
+
+     1 'Male'
+     2 'Female' 
+     0 'Not applicable/not the first interview'
+
+* Not asked in Korea and Philippines
+
+   IR2B 'Interviewer's Age'
+
+     90 'Not applicable/Not the first interview' 
+     99 'Decline to answer'
+
+   IR3  'In the interview, other than the respondent, were others present?'
+
+     1 'Yes'
+     2 'No' 
+     0 'Can't determine'
+
+* Not asked in Hong Kong, Korea, Philippines
+
+   IR3A 'Who were they?'
+	
+        IR3a_1 Respondent's spouse*
+        IR3a_2 Respondent's children*
+        IR3a_3 Respondent's parents or parents-in-law*
+        IR3a_4 Neighbors/Passers by ** 
+        IR3a_5 Party/Government official+
+        IR3a_6 Others++
+
+     0 'Not applicable'
+     1 'Yes'
+     2 'No'
+
+*   Not asked in Hong Kong, Korea, and Philippines
+**  Not asked in Hong Kong, Korea, Philippines, and Thailand
++   Not asked in Hong Kong, Korea, Philippines, Thailand, and Singapore
+++  Not asked in Hong Kong, Korea, Philippines, and Indonesia
+
+
+   IR4  'Has the respondent ever refused to be interviewed during the whole process?'*
+
+     0 'Can't determine'
+     1 'Yes. Right at the beginning of the interview'
+     2 'Yes. In the middle of the interview. '
+     3 'Yes. Towards the end of the interview. '
+     4 'Never' 
+
+* Not asked in Hong Kong and Philippines 
+
+   IR5 'Has the respondent ever felt impatient during the interview?'*
+
+     0 'Can't determine'
+     1 'Never '
+     2 'Occasionally'
+     3 'Sometimes'
+     4 'Always'
+
+* Not asked in Hong Kong and Philippines
+ 
+   IR6 'How cooperative was the respondent during the interview?'*
+
+     0 'Can't determine'
+     1 'Highly cooperative '
+     2 'Fairly cooperative '
+     3 'Not very cooperative ' 
+
+* Not asked in Hong Kong and Philippines
+
+   IR7 'How sincere was the respondent when answering sensitive questions?'*
+
+     0 'Can't determine' 
+     1 'Highly sincerely'
+     2 'Fairly sincere'
+     3 'Not  sincere/not very sincere'
+     4 'Highly insincerely' 
+
+* Not asked in Hong Kong and Philippines
+
+   IR8 'What proportion of the questions do you feel the respondent had the difficulty answering?(New)'*
+
+     0 'Can't determine'
+     1 'All'
+     2 'Most'
+     3 'Some'
+     4 'Few'
+     5 'None'
+
+* Not asked in Hong Kong and Philippines  
+
+   IR10A 'Was the interview conducted with the assistance of an interpreter?'*
+
+     0 'Can't determine'
+     1 'Yes'
+     2 'No' 
+ 
+* Not asked in Japan, Hong Kong, Korea, Philippines, and Cambodia
+
+   IR12A 'What is the condition of the road leading to interviewee's residence?"*
+
+     1 'Wide enough for car and paved with asphalt, cement or man-ma'
+     2 'Not wide enough for car, but paved with asphalt, cement or m'
+     3 'Paved with stone'
+     4 'Unpaved/dirt road'
+     5 'Muddy' 
+     6 'Others'
+
+* Not asked in Hong Kong, Korea, China, Philippines, and Singapore
+   
+    IR12B 'Is the tap water the main source of drinking water?'*
+
+     0 'Can't determine'
+     1 'Yes'
+     2 'No'
+
+* Not asked in Japan, Hong Kong, Korea, Philippines, and Singapore  
+   
+    IR12C 'Is electricity the main source of lighting in the house?'*
+
+     0 'Can't determine'
+     1 'Yes'
+     2 'No'
+
+* Not asked in Japan, Hong Kong, Korea, Philippines, and Singapore
+
+    IR12D  'In terms of walking distance, how far is it between the nearest public transportation stop (bus, train, ferry, tram, etc.) and the respondent's house?'*
+
+     0 'Can't determine'
+     1 'Less than 10 minutes by walking '
+     2 'Less than 20 minutes '
+     3 'Less than 40 minutes '
+     4 'Less than an hour '
+     5 'Less than two hours '
+     6 'Less than three hours '
+     7 'Less than four hours '
+     8 'More than fours hours ' 
+     9 'No stops'
+
+* Not asked in Hong Kong, Korea, Philippines, Singapore, and Cambodia
+
+   IR13  'Were the following services present within the neighborhood, estimate the distance 
+        of services by ..'
+
+     1 'walking'
+     2 'Easy driving' /
+
+
+   IR13A 'Post-office'
+   IR13B 'School'
+   IR13C 'Police station'
+   IR13D 'Sewerage system that most houses could access'
+   IR13E 'Health clinic'
+   IR13F 'Signal for cellular phone'
+   IR13G 'Recreational facilities, e.g., a sports field'
+   IR13H 'Any churches, mosques, temples or other public places of worship'
+   IR13I 'Any town halls or community buildings that can be used for meetings'
+   IR13K 'Market stalls (selling groceries and/or clothing)'
+
+     0 'No'
+     1 'Yes'
+     2 'No'
+     3 'Not sure'
+     9 "Can't determine" /
+
+
+   IR14  'Which of the following levels within the country the respondent live?'*
+
+     1 'Capital or Megacity (1 million population plus)'
+     2 'Regional center or Other major cities (100,000 plus)'
+     3 'Small city or town (less than 100,000 people)'
+     4 'Village or countryside'
+     5 'Suburbia'
+     6 'Remote areas'
+     7 'Can't choose'
+
+* Not asked in Hong Kong, Indonesia, and Singapore
+
+
+
+    
+ 
+   
