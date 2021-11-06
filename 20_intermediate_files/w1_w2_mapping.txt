@@ -54,17 +54,33 @@ Contacted officials to express your opinions at higher level? <==> Contacted off
 contacted elected legislative representatives at any level?  <==> Contacted elected officials or legislative representatives at any level
 Contacted political parties or other political organizations? <==> Contacted officials of political parties or other political organizations
 Contacted non-government/civil society organizations?        <==> Contacted representative of non-government/civil society organizations
+Contacted media to comment on something?                     <==> Contacted other influential people
+Demonstrated, striken, or sat-in for something?              <==> Have you been a victim of break-in at your home?
+Contacted other people?                                      <==> Contacted other influential people
+Did you do this alone or with others?_contacted government official <==> Party/Government Official
+Did you do this alone or with others?_contacted officials at higher level <==> Contacted officials at higher level
+Did you do this alone or with others?_contacted elected legislative representatives at any level <==> Contacted elected officials or legislative representatives at any level
+Did you do this alone or with others?_contacted political parties or other political organizations <==> Contacted officials of political parties or other political organizations
+Did you do this alone or with others?_ contacted non-government/civil society organizations <==> Contacted representative of non-government/civil society organizations
 
 
 
-MEANING OF DEMOCRACY FIRST                                   <==> First organization
-MEANING OF DEMOCRACY SECOND                                  <==> Second organization
-MEANING OF DEMOCRACY THIRD                                   <==> Third organization
+
+
+
+
+
+
+
+
+
+
+
 Satisfaction with the way democracy works in our country?    <==> On the whole, how satisfied or dissatisfied are you with the way democracy works in [country]?
 Where would you place our country on this scale during the period of [name of the most recent government under authoritarian rule]? <==> Where would you place our country during the period of [the name of the most recent government under authoritarian rule]?
 Where would you place our country under the present government? <==> Where would you place our country under the present government?
 To what extent would you want our country to be democratic now? <==> To what extent would you want our country to be democratic now?
-Where do you expect our country to be in five years?         <==> What do you think will be the state of our country's economic condition a few years from now?
+
 Do you think democracy is suitable for our country?          <==> Which would you think democracy is suitable for our country?
 How satisfied or dissatisfied are you with the current government? <==> How satisfied or dissatisfied are you with the [name of present] government?
 Everyone is free to say what they think- is better than before? <==> People are free to speak what they think without fear
@@ -76,6 +92,16 @@ Preventing crime and maintaining order- is better than before? <==> Have you tra
 
 
 
+
+
+
+
+
+
+
+Economic development- is better than before?                 <==> If you had to choose between democracy and economic development, which would you say is more important?
+Judges and courts are free from political interference- is better than before? <==> Trust in the Courts
+You can join any organization you like- is better than before? <==> People can join any organization the like without fear
 How widespread corruption in your local/municipal government? <==> How widespread do you think corruption and bribe-taking are in your local/municipal government?
 How widespread corruption in the national government?        <==> How widespread do you think corruption and bribe-taking are in the national government?
 anyone you know personally witnessed an act of corruption?   <==> Have you or anyone you know personally witnessed an act of corruption or bribe-taking by a politician or government official in the past year?
@@ -106,33 +132,21 @@ The government should maintain ownership of major state-owned enterprises <==> T
 
 Our country should defend our way of life instead of becoming more and more like other countries <==> Our country should defend our way of life instead of becoming more and more like other countries
 For the sake of the national community/society, the individual should be prepared to sacrifice his personal interest <==> For the sake of the national community/society, the individual should be prepared to sacrifice
-The state is like a big machine and the individual is but a small cog, with no independent status <==> Marital Status
+
 The most important thing for a political leader is to accomplish his goals even if he has to ignore the established proc <==> The most important thing for political leaders is to accomplish their goals even if they have to ignore the established procedure
-If a political leader really believes in his position, he should refuse to compromise regardless of how many people disa <==> How many people live in this household?
-A political leader should tolerate the views of those who challenge his political ideals <==> Contacted officials of political parties or other political organizations
-A political leader should not tolerate the views of those who challenge his political ideals <==> Contacted officials of political parties or other political organizations
-As long as a political leader enjoys majority support, he should implement his own agenda and disregard the view of the <==> If a government policy serves the interests of the majority of people, I should support it
-Interviewer_s number                                         <==> Number of formal group
-Is this the first questionnaire the interviewer have completed? <==> Is this the first questionnaire interviewers have completed?
+
+Is this the first questionnaire the interviewer have completed? <==> Is this the first questionnire interviewers have completed?
 Interviewer_s gender                                         <==> Gender
 Interviewer_s age                                            <==> Age
-Presence of others other than the respondent while interviewing <==> Others
+
 Has the respondent ever refused to be interviewed during the whole process? <==> Has the respondent ever refused to be interviewed during the whole process?
 Has the respondent ever felt impatient during the interview? <==> Has the respondent ever felt impatient during the interview?
 How cooperative was the respondent during the interview?     <==> How cooperative was the respondent during the interview?
+
 date of interview: month                                     <==> Date of interview: month
 date of interview: day                                       <==> Date of interview: day
 date of interview: year                                      <==> Date of interview: year
+
 Was the interview conducted with the assisance of an interpreter <==> Was the interview conducted with the assistance of an interpreter?
 What is the condition of the road leading to interview's residence <==> What is the condition of the road leading to the interviewee's residence?
-How do rate the sanitary condition in the public area in the interviewee's nearby neighborhood <==> What is the condition of the road leading to the interviewee's residence?
-Tell us whetherthe interviewee's residence has public water supply <==> What is the condition of the road leading to the interviewee's residence?
-Tell us whetherthe interviewee's residence has electricity   <==> What is the condition of the road leading to the interviewee's residence?
 Walking distance between the nearest public transportation stop and the respondent's house <==> How far is it between the nearest public transportation stop and the respondent's house?
-weight                                                       <==> Country Code
-weight for age (recommended)                                 <==> Age
-weight                                                       <==> Country Code
-weight for sex, age, region                                  <==> Age
-weight                                                       <==> Country Code
-weight                                                       <==> Country Code
-weight                                                       <==> Country Code
