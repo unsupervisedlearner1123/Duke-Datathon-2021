@@ -22,7 +22,6 @@ How much trust do you have in the national government?       <==> Trust in the n
 How much trust do you have in political parties?             <==> Trust in Political parties
 How much trust do you have in Parliament?                    <==> Trust in Parliament
 How much trust do you have in civil service?                 <==> Trust in Civil service
-How much trust do you have in the military?                  <==> How much trust do you have in your relatives?
 How much trust do you have in the police?                    <==> Trust in the police
 How much trust do you have in local government?              <==> Trust in local government
 How much trust do you have in television?                    <==> Trust in television
@@ -40,34 +39,16 @@ Even if parents' demands are unreasonable, children still should do what they as
 When one has a conflict with a neighbor, the best way to deal with it is to accommodate the other person? <==> When one has conflict with a neighbor, the best way to deal with it is to accommodate the other person
 A person should not insist on his own opinion if his co-workers disagree with him? <==> A person should not insist on his own opinion if his co-workers disagree with him
 For the sake of the family, the individual should put his personal interests second? <==> For the sake of the family, the individual should put his personal interests second
-
-Contacted any government official to express your opinions?  <==> Contacted government (administrative) official
 Contacted officials to express your opinions at higher level? <==> Contacted officials at higher level
 contacted elected legislative representatives at any level?  <==> Contacted elected officials or legislative representatives at any level
 Contacted political parties or other political organizations? <==> Contacted officials of political parties or other political organizations
 Contacted non-government/civil society organizations?        <==> Contacted representative of non-government/civil society organizations
-Contacted media to comment on something?                     <==> Contacted other influential people
-Demonstrated, striken, or sat-in for something?              <==> Have you been a victim of break-in at your home?
-Contacted other people?                                      <==> Contacted other influential people
-Did you do this alone or with others?_contacted government official <==> Party/Government Official
-Did you do this alone or with others?_contacted officials at higher level <==> Contacted officials at higher level
-Did you do this alone or with others?_contacted elected legislative representatives at any level <==> Contacted elected officials or legislative representatives at any level
-Did you do this alone or with others?_contacted political parties or other political organizations <==> Contacted officials of political parties or other political organizations
-Did you do this alone or with others?_ contacted non-government/civil society organizations <==> Contacted representative of non-government/civil society organizations
 Satisfaction with the way democracy works in our country?    <==> On the whole, how satisfied or dissatisfied are you with the way democracy works in [country]?
 Where would you place our country on this scale during the period of [name of the most recent government under authoritarian rule]? <==> Where would you place our country during the period of [the name of the most recent government under authoritarian rule]?
 Where would you place our country under the present government? <==> Where would you place our country under the present government?
 To what extent would you want our country to be democratic now? <==> To what extent would you want our country to be democratic now?
 Do you think democracy is suitable for our country?          <==> Which would you think democracy is suitable for our country?
 How satisfied or dissatisfied are you with the current government? <==> How satisfied or dissatisfied are you with the [name of present] government?
-Everyone is free to say what they think- is better than before? <==> People are free to speak what they think without fear
-Everyone is treated equally by the government- is better than before? <==> Everyone is treated equally by the government
-People like me can have an influence on government- is better than before? <==> People have the power to change a government they don't like
-Corruption in politics and government is under control- is better than before? <==> How often do you follow news about politics and government
-The gap between the rich and the poor have narrowed- is better than before? <==> In order to preserve social justice, the government should prevent the gap between rich and poor from growing any larger
-Preventing crime and maintaining order- is better than before? <==> Have you traveled abroad before? If you have, how often do you travel abroad?
-Economic development- is better than before?                 <==> If you had to choose between democracy and economic development, which would you say is more important?
-Judges and courts are free from political interference- is better than before? <==> Trust in the Courts
 You can join any organization you like- is better than before? <==> People can join any organization the like without fear
 How widespread corruption in your local/municipal government? <==> How widespread do you think corruption and bribe-taking are in your local/municipal government?
 How widespread corruption in the national government?        <==> How widespread do you think corruption and bribe-taking are in the national government?
@@ -76,6 +57,7 @@ choose between democracy and economic development?           <==> If you had to 
 We should get rid of parliament and elections and have a strong leader decide things <==> We should get rid of parliament and elections and have a strong leader decide things
 The military should come in to govern the country            <==> The army should come in to govern the country
 It is ok for the government to disregard the law in order to deal with the situation, when the country is facing a diffi <==> When the country is facing a difficult situation, it is ok for the government to disregard the law in order to deal with the situation
+
 I have the ability to participate in politics                <==> I think I have the ability to participate in politics
 Politics and government seems so complicated that a person like me can't really understand what is going on <==> Sometimes politics and government seems so complicated that a person like me can't really understand what is going on
 Our form of government is still the best for us              <==> Whatever its faults may be, our form of government is still the best for us
@@ -92,15 +74,3 @@ The government should maintain ownership of major state-owned enterprises <==> T
 Our country should defend our way of life instead of becoming more and more like other countries <==> Our country should defend our way of life instead of becoming more and more like other countries
 For the sake of the national community/society, the individual should be prepared to sacrifice his personal interest <==> For the sake of the national community/society, the individual should be prepared to sacrifice
 The most important thing for a political leader is to accomplish his goals even if he has to ignore the established proc <==> The most important thing for political leaders is to accomplish their goals even if they have to ignore the established procedure
-Is this the first questionnaire the interviewer have completed? <==> Is this the first questionnire interviewers have completed?
-Interviewer_s gender                                         <==> Gender
-Interviewer_s age                                            <==> Age
-Has the respondent ever refused to be interviewed during the whole process? <==> Has the respondent ever refused to be interviewed during the whole process?
-Has the respondent ever felt impatient during the interview? <==> Has the respondent ever felt impatient during the interview?
-How cooperative was the respondent during the interview?     <==> How cooperative was the respondent during the interview?
-date of interview: month                                     <==> Date of interview: month
-date of interview: day                                       <==> Date of interview: day
-date of interview: year                                      <==> Date of interview: year
-Was the interview conducted with the assisance of an interpreter <==> Was the interview conducted with the assistance of an interpreter?
-What is the condition of the road leading to interview's residence <==> What is the condition of the road leading to the interviewee's residence?
-Walking distance between the nearest public transportation stop and the respondent's house <==> How far is it between the nearest public transportation stop and the respondent's house?
