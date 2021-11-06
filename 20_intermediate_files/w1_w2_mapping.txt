@@ -70,33 +70,33 @@ Did you do this alone or with others?_contacted officials at higher level <==> C
 Did you do this alone or with others?_contacted elected legislative representatives at any level <==> Contacted elected officials or legislative representatives at any level
 Did you do this alone or with others?_contacted political parties or other political organizations <==> Contacted officials of political parties or other political organizations
 Did you do this alone or with others?_ contacted non-government/civil society organizations <==> Contacted representative of non-government/civil society organizations
-Did you do this alone or with others?_contacted media        <==> Others
-Did you do this alone or with others?_demonstration, strike, sit-in <==> Others
-Did you do this alone or with others?_contacted other people <==> Others
-Gift or dinner_contacted government                          <==> Trust in the national government
-Gift or dinner_contacted officials at highter level          <==> Contacted officials at higher level
-Gift or dinner_contacted elected legislative representatives <==> Contacted elected officials or legislative representatives at any level
-Gift or dinner_contacted political parties or other political organizations <==> Contacted officials of political parties or other political organizations
-Gift or dinner_contacted non-goverment/civil society organizations <==> Contacted representative of non-government/civil society organizations
-Gift or dinner_contacted media                               <==> Political parties or candidates in our country have equal access to the mass media during the election period
-Gift or dinner_demonstration, strike, sit-in                 <==> Have you been a victim of break-in at your home?
-Gift or dinner_contacted other people                        <==> People with little or no education should have as much say in politics as highly-educated people
-MEANING OF DEMOCRACY FIRST                                   <==> First organization
-MEANING OF DEMOCRACY SECOND                                  <==> Second organization
-MEANING OF DEMOCRACY THIRD                                   <==> Third organization
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 Satisfaction with the way democracy works in our country?    <==> On the whole, how satisfied or dissatisfied are you with the way democracy works in [country]?
 Where would you place our country on this scale during the period of [name of the most recent government under authoritarian rule]? <==> Where would you place our country during the period of [the name of the most recent government under authoritarian rule]?
 Where would you place our country under the present government? <==> Where would you place our country under the present government?
 To what extent would you want our country to be democratic now? <==> To what extent would you want our country to be democratic now?
-Where do you expect our country to be in five years?         <==> What do you think will be the state of our country's economic condition a few years from now?
+
 Do you think democracy is suitable for our country?          <==> Which would you think democracy is suitable for our country?
-How satisfied or dissatisfied are you with the current government? <==> How satisfied or dissatisfied are you with the [name of present] government?
-Everyone is free to say what they think- is better than before? <==> People are free to speak what they think without fear
-Everyone is treated equally by the government- is better than before? <==> Everyone is treated equally by the government
-People like me can have an influence on government- is better than before? <==> People have the power to change a government they don't like
-Corruption in politics and government is under control- is better than before? <==> How often do you follow news about politics and government
-The gap between the rich and the poor have narrowed- is better than before? <==> In order to preserve social justice, the government should prevent the gap between rich and poor from growing any larger
-Preventing crime and maintaining order- is better than before? <==> Have you traveled abroad before? If you have, how often do you travel abroad?
+
+
+
+
+
+
+
 Economic development- is better than before?                 <==> If you had to choose between democracy and economic development, which would you say is more important?
 Judges and courts are free from political interference- is better than before? <==> Trust in the Courts
 You can join any organization you like- is better than before? <==> People can join any organization the like without fear
