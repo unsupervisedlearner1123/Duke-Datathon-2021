@@ -7,6 +7,8 @@ import os
 from data_mapping import column_mapping
 from data_mapping import response_mapping
 
+COUNTRY = "Japan"
+
 
 pd.set_option("display.max_rows", 100, "display.max_columns", 100)
 
@@ -33,5 +35,54 @@ for colname, unique_vals in response_mapping.items():
 
 # %%
 df2.rename(column_mapping, axis=1, inplace=True)
+
+# %%
+cat_cols = [
+    "country",
+    "area",
+    "urban_rural",
+    "grtokyo50",
+    "grkansai30",
+    "citysize",
+    "gender",
+    "maritalstatus",
+    "education",
+    "income",
+    "q007",
+    "q008",
+    "q009",
+    "q010",
+    "q006",
+    "q098",
+    "q128",
+    "q005",
+    "q027",
+    "q028",
+    "q105",
+    "q106",
+    "q121",
+    "q123",
+    "q127",
+]
+
+int_cols = [
+    "yrsurvey",
+    "month",
+    "day",
+    "time",
+    "age"
+]
+
+
+#%%
+
+df2 = df2.drop("country", axis=1)
+df2['country'] = COUNTRY
+
+for catcol in cat_cols:
+    df2[catcol] = df2[catcol].astype("category")
+
+for intcol in int_cols:
+    df2[intcol] = df2[intcol].astype("int")
 
 # %%
