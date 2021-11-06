@@ -128,36 +128,26 @@ If the government is constantly checked by the legislature, it cannot possibly a
 If we have political leaders who are morally upright, we can let them decide everything <==> If we have political leaders who are morally upright, we can let them decide everything
 If people have too many different ways of thinking, society will be chaotic <==> If people have too many different ways of thinking, society will be chaotic
 The government should maintain ownership of major state-owned enterprises <==> The government should maintain ownership of major state-owned enterprises
+
+
 The national government should have more authority over local decisions than it does now <==> The local government should have more authority over local decisions than it does now
 Our country should defend our way of life instead of becoming more and more like other countries <==> Our country should defend our way of life instead of becoming more and more like other countries
 For the sake of the national community/society, the individual should be prepared to sacrifice his personal interest <==> For the sake of the national community/society, the individual should be prepared to sacrifice
-The state is like a big machine and the individual is but a small cog, with no independent status <==> Marital Status
+
 The most important thing for a political leader is to accomplish his goals even if he has to ignore the established proc <==> The most important thing for political leaders is to accomplish their goals even if they have to ignore the established procedure
-If a political leader really believes in his position, he should refuse to compromise regardless of how many people disa <==> How many people live in this household?
-A political leader should tolerate the views of those who challenge his political ideals <==> Contacted officials of political parties or other political organizations
-A political leader should not tolerate the views of those who challenge his political ideals <==> Contacted officials of political parties or other political organizations
-As long as a political leader enjoys majority support, he should implement his own agenda and disregard the view of the <==> If a government policy serves the interests of the majority of people, I should support it
-Interviewer_s number                                         <==> Number of formal group
-Is this the first questionnaire the interviewer have completed? <==> Is this the first questionnaire interviewers have completed?
+
+Is this the first questionnaire the interviewer have completed? <==> Is this the first questionnire interviewers have completed?
 Interviewer_s gender                                         <==> Gender
 Interviewer_s age                                            <==> Age
-Presence of others other than the respondent while interviewing <==> Others
+
 Has the respondent ever refused to be interviewed during the whole process? <==> Has the respondent ever refused to be interviewed during the whole process?
 Has the respondent ever felt impatient during the interview? <==> Has the respondent ever felt impatient during the interview?
 How cooperative was the respondent during the interview?     <==> How cooperative was the respondent during the interview?
+
 date of interview: month                                     <==> Date of interview: month
 date of interview: day                                       <==> Date of interview: day
 date of interview: year                                      <==> Date of interview: year
+
 Was the interview conducted with the assisance of an interpreter <==> Was the interview conducted with the assistance of an interpreter?
 What is the condition of the road leading to interview's residence <==> What is the condition of the road leading to the interviewee's residence?
-How do rate the sanitary condition in the public area in the interviewee's nearby neighborhood <==> What is the condition of the road leading to the interviewee's residence?
-Tell us whetherthe interviewee's residence has public water supply <==> What is the condition of the road leading to the interviewee's residence?
-Tell us whetherthe interviewee's residence has electricity   <==> What is the condition of the road leading to the interviewee's residence?
 Walking distance between the nearest public transportation stop and the respondent's house <==> How far is it between the nearest public transportation stop and the respondent's house?
-weight                                                       <==> Country Code
-weight for age (recommended)                                 <==> Age
-weight                                                       <==> Country Code
-weight for sex, age, region                                  <==> Age
-weight                                                       <==> Country Code
-weight                                                       <==> Country Code
-weight                                                       <==> Country Code
