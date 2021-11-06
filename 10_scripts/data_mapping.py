@@ -1,4 +1,4 @@
-merge_column_mapping = {
+w1_column_mapping = {
     "se003": "agegroup",
     "se004a": "married",
     "se005a": "educyear",
@@ -12,7 +12,7 @@ merge_column_mapping = {
     "se009": "income_quantile",
 }
 
-merge_response_mapping = {
+w1_response_mapping = {
     "country": {
         1.0: "Japan",
         2.0: "Hong Kong",
@@ -346,4 +346,22 @@ merge_response_mapping = {
         98.0: "Don't know",
         99.0: "No answer",
     },
+}
+
+w2_column_mapping = {
+    "se003": "agegroup",
+    "se004a": "married",
+    "se005a": "educyear",
+    "level3": "urban_rural",
+    "se002": "gender",
+    "se003a": "age",
+    "se004": "maritalstatus",
+    "se004a": "married",
+    "se005": "education",
+    "se005a": "educationyear",
+    "se009": "income_quantile",
+}
+
+w2_response_mapping = {
+
 }
