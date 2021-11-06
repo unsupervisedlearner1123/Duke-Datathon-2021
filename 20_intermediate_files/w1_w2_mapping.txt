@@ -1,12 +1,5 @@
 religion                                                     <==> Religion
 household generations                                        <==> How many generations of family members live in this household?
-Main Occupation                                              <==> Main Occupation
-main occupation(orginal)                                     <==> Main Occupation
-OCCUPATION(original)                                         <==> Main Occupation
-Occupation(original)                                         <==> Main Occupation
-OCCUPATION                                                   <==> Main Occupation
-occupation (verbatim)                                        <==> Main Occupation
-Primary occupation of respondent                             <==> Main Occupation
 language                                                     <==> What language do you speak the most in the Home?
 subjective social status                                     <==> Subjective Social Status
 Religion                                                     <==> Religion
