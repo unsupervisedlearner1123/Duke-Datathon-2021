@@ -3,3 +3,4 @@ numpy
 pyreadstat
 matplotlib
 seaborn
+fastparquet
