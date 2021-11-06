@@ -9,24 +9,22 @@ df = pd.read_parquet("../20_intermediate_files/mergeddata.parquet")
 
 #%%
 q_cols = [col for col in df.columns if col.startswith("q")]
+kick_out = ["q027", "q028"]
 
 #%%
-subset = df[q_cols]
+subset = df[(col for col in q_cols if col not in kick_out)].copy()
 
 #%%
-ohe_subset = pd.get_dummies(subset)
+for col in subset.columns:
+    subset[col] = subset[col].cat.add_categories(["missing"])
+    subset[col] = subset[col].fillna("missing")
+    
 
 #%%
 
-hc = AgglomerativeClustering(n_clusters=3)
-preds = hc.fit_predict(ohe_subset)
+from sklearn.preprocessing import OrdinalEncoder
+
+oe = OrdinalEncoder()
+oe.fit_transform(subset)
 
 #%%
-ohe_subset.groupby(preds).mean().T.style.background_gradient(cmap='summer_r')
-
-#%%
-km = KMeans(n_clusters=3)
-preds_km = km.fit_predict(ohe_subset)
-
-#%%
-ohe_subset.groupby(preds_km).mean().T.style.background_gradient(cmap='summer_r')
