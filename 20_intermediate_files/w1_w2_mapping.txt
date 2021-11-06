@@ -1,0 +1,163 @@
+religion                                                     <==> Religion
+household generations                                        <==> How many generations of family members live in this household?
+Main Occupation                                              <==> Main Occupation
+main occupation(orginal)                                     <==> Main Occupation
+OCCUPATION(original)                                         <==> Main Occupation
+Occupation(original)                                         <==> Main Occupation
+OCCUPATION                                                   <==> Main Occupation
+occupation (verbatim)                                        <==> Main Occupation
+Primary occupation of respondent                             <==> Main Occupation
+language                                                     <==> What language do you speak the most in the Home?
+subjective social status                                     <==> Subjective Social Status
+Religion                                                     <==> Religion
+number of formal group                                       <==> Number of formal group
+How would you rate the overall economic condition of our country today? <==> How would you rate the overall economic condition of our country today?
+How would you describe the change in the economic condition of our country over the past five years? <==> How would you describe the change in the economic condition of our country over the last years?
+What do you think will be the state of our country's economic condition five years from now? <==> What do you think will be the state of our country's economic condition a few years from now?
+As for your own family, how do you rate your economic situation today? <==> As for your own family, how do you rate your economic situation today?
+How would you compare the current economic condition of your family with what it was five years ago? <==> How would you compare the current economic condition of your family with what it was a few years ago?
+What do you think the economic situation of your family will be five years from now? <==> What do you think the economic situation of your family will be a few years from now?
+How much trust do you have in the courts?                    <==> Trust in the Courts
+How much trust do you have in the national government?       <==> Trust in the national government
+How much trust do you have in political parties?             <==> Trust in Political parties
+How much trust do you have in Parliament?                    <==> Trust in Parliament
+How much trust do you have in civil service?                 <==> Trust in Civil service
+How much trust do you have in the military?                  <==> How much trust do you have in your relatives?
+How much trust do you have in the police?                    <==> Trust in the police
+How much trust do you have in local government?              <==> Trust in local government
+How much trust do you have in television?                    <==> Trust in television
+How much trust do you have in the election commission?       <==> Trust in the election commission(Singapore: International TV)
+
+
+most people can be trusted??                                 <==> General speaking, would you say "Most people can be trusted" or "that you must be very careful"?
+
+
+Have you participated in last election?                      <==> Have you voted in the last election?
+Did you attend a campaign meeting or rally?                  <==> Attend a campaign meeting or rally
+Did you try to persuade others to vote for a certain candidate or party? <==> Try to persuade others to vote for a certain candidate or party
+Did you do anything else to help or show your support for a party or candidate running in the election? <==> Did you do anything else to help out or work for a party or candidate running in the election
+
+
+
+
+How interested would you say you are interested in politics? <==> How interested would you say you are in politics
+How often do you follow news about politics?                 <==> How often do you follow news about politics and government
+
+
+
+How much impact do you feel government policies have on your daily life? <==> How much impact do you feel government politics have on your daily life?
+party feel closest to                                        <==> Among the political parties listed here, which party if any do you feel closest to?
+closeness                                                    <==> Country Code
+Even if parents' demands are unreasonable, children still should do what they ask? <==> Even if parents' demands are unreasonable, children still should do what they ask
+When hiring someone, even if a stranger is more qualified, the opportunity should still be given to relatives and friend <==> Even if parents' demands are unreasonable, children still should do what they ask
+When one has a conflict with a neighbor, the best way to deal with it is to accommodate the other person? <==> When one has conflict with a neighbor, the best way to deal with it is to accommodate the other person
+Wealth and poverty, success and failure are all determined by fate? <==> Country Code
+A person should not insist on his own opinion if his co-workers disagree with him? <==> A person should not insist on his own opinion if his co-workers disagree with him
+For the sake of the family, the individual should put his personal interests second? <==> For the sake of the family, the individual should put his personal interests second
+A man will lose face if he works under a female supervisor?  <==> On the whole, how satisfied or dissatisfied are you with the way democracy works in [country]?
+If there is a quarrel, we should ask an elder to resolve the dispute? <==> Even if parents' demands are unreasonable, children still should do what they ask
+When a mother-in-law and a daughter-in-law come into conflict, even if the mother-in-law is in the wrong, the husband sh <==> Have you been a victim of break-in at your home?
+Contacted any government official to express your opinions?  <==> Contacted government (administrative) official
+Contacted officials to express your opinions at higher level? <==> Contacted officials at higher level
+contacted elected legislative representatives at any level?  <==> Contacted elected officials or legislative representatives at any level
+Contacted political parties or other political organizations? <==> Contacted officials of political parties or other political organizations
+Contacted non-government/civil society organizations?        <==> Contacted representative of non-government/civil society organizations
+Contacted media to comment on something?                     <==> Contacted other influential people
+Demonstrated, striken, or sat-in for something?              <==> Have you been a victim of break-in at your home?
+Contacted other people?                                      <==> Contacted other influential people
+Did you do this alone or with others?_contacted government official <==> Party/Government Official
+Did you do this alone or with others?_contacted officials at higher level <==> Contacted officials at higher level
+Did you do this alone or with others?_contacted elected legislative representatives at any level <==> Contacted elected officials or legislative representatives at any level
+Did you do this alone or with others?_contacted political parties or other political organizations <==> Contacted officials of political parties or other political organizations
+Did you do this alone or with others?_ contacted non-government/civil society organizations <==> Contacted representative of non-government/civil society organizations
+Did you do this alone or with others?_contacted media        <==> Others
+Did you do this alone or with others?_demonstration, strike, sit-in <==> Others
+Did you do this alone or with others?_contacted other people <==> Others
+Gift or dinner_contacted government                          <==> Trust in the national government
+Gift or dinner_contacted officials at highter level          <==> Contacted officials at higher level
+Gift or dinner_contacted elected legislative representatives <==> Contacted elected officials or legislative representatives at any level
+Gift or dinner_contacted political parties or other political organizations <==> Contacted officials of political parties or other political organizations
+Gift or dinner_contacted non-goverment/civil society organizations <==> Contacted representative of non-government/civil society organizations
+Gift or dinner_contacted media                               <==> Political parties or candidates in our country have equal access to the mass media during the election period
+Gift or dinner_demonstration, strike, sit-in                 <==> Have you been a victim of break-in at your home?
+Gift or dinner_contacted other people                        <==> People with little or no education should have as much say in politics as highly-educated people
+MEANING OF DEMOCRACY FIRST                                   <==> First organization
+MEANING OF DEMOCRACY SECOND                                  <==> Second organization
+MEANING OF DEMOCRACY THIRD                                   <==> Third organization
+Satisfaction with the way democracy works in our country?    <==> On the whole, how satisfied or dissatisfied are you with the way democracy works in [country]?
+Where would you place our country on this scale during the period of [name of the most recent government under authoritarian rule]? <==> Where would you place our country during the period of [the name of the most recent government under authoritarian rule]?
+Where would you place our country under the present government? <==> Where would you place our country under the present government?
+To what extent would you want our country to be democratic now? <==> To what extent would you want our country to be democratic now?
+Where do you expect our country to be in five years?         <==> What do you think will be the state of our country's economic condition a few years from now?
+Do you think democracy is suitable for our country?          <==> Which would you think democracy is suitable for our country?
+How satisfied or dissatisfied are you with the current government? <==> How satisfied or dissatisfied are you with the [name of present] government?
+Everyone is free to say what they think- is better than before? <==> People are free to speak what they think without fear
+Everyone is treated equally by the government- is better than before? <==> Everyone is treated equally by the government
+People like me can have an influence on government- is better than before? <==> People have the power to change a government they don't like
+Corruption in politics and government is under control- is better than before? <==> How often do you follow news about politics and government
+The gap between the rich and the poor have narrowed- is better than before? <==> In order to preserve social justice, the government should prevent the gap between rich and poor from growing any larger
+Preventing crime and maintaining order- is better than before? <==> Have you traveled abroad before? If you have, how often do you travel abroad?
+Economic development- is better than before?                 <==> If you had to choose between democracy and economic development, which would you say is more important?
+Judges and courts are free from political interference- is better than before? <==> Trust in the Courts
+You can join any organization you like- is better than before? <==> People can join any organization the like without fear
+How widespread corruption in your local/municipal government? <==> How widespread do you think corruption and bribe-taking are in your local/municipal government?
+How widespread corruption in the national government?        <==> How widespread do you think corruption and bribe-taking are in the national government?
+anyone you know personally witnessed an act of corruption?   <==> Have you or anyone you know personally witnessed an act of corruption or bribe-taking by a politician or government official in the past year?
+anyone you know personally witnessed ?                       <==> 119_1 Personally witnessed
+Which comes closest to your own opinion?                     <==> Which of the following statements comes closest to your own opinion?
+Which comes closer to your own view?                         <==> Which of the following statements comes closer to your own view?
+choose between democracy and economic development?           <==> If you had to choose between democracy and economic development, which would you say is more important?
+Which comes closer to your own view?                         <==> Which of the following statements comes closer to your own view?
+We should get rid of parliament and elections and have a strong leader decide things <==> We should get rid of parliament and elections and have a strong leader decide things
+No opposition party should be allowed to compete for power   <==> Only one political party is allowed to stand for election and hold office
+The military should come in to govern the country            <==> The army should come in to govern the country
+We should get rid of parliament and elections and have the experts decide everything <==> We should get rid of parliament and elections and have a strong leader decide things
+It is ok for the government to disregard the law in order to deal with the situation, when the country is facing a diffi <==> When the country is facing a difficult situation, it is ok for the government to disregard the law in order to deal with the situation
+I have the ability to participate in politics                <==> I think I have the ability to participate in politics
+Politics and government seems so complicated that a person like me can't really understand what is going on <==> Sometimes politics and government seems so complicated that a person like me can't really understand what is going on
+The nation is run by a powerful few and ordinary citizens cannot do much about it <==> How much trust do you have in your relatives?
+People like me don't have any influence over what the government does <==> People have the power to change a government they don't like
+Our form of government is still the best for us              <==> Whatever its faults may be, our form of government is still the best for us
+You can generally trust the people who run our government to do what is right <==> You can generally trust the people who run our government to do what is right (HK: Hong Kong government)
+People with little or no education should have as much say in politics as highly-educated people <==> People with little or no education should have as much say in politics as highly-educated people
+Government leaders are like the head of a family; we should all follow their decisions <==> Government leaders are like the head of a family; we should all follow their decisions
+The government should decide whether certain ideas should be allowed to be discussed in society <==> The government should decide whether certain ideas should be allowed to be discussed in society
+Harmony of the community will be disrupted if people organize lots of groups <==> Harmony of the community will be disrupted if people organize lots of groups
+When judges decide important cases, they should accept the view of the executive branch <==> When judges decide important cases, they should accept the view of the executive branch
+If the government is constantly checked by the legislature, it cannot possibly accomplish great things <==> If the government is constantly checked by the legislature, it cannot possibly accomplish great things
+If we have political leaders who are morally upright, we can let them decide everything <==> If we have political leaders who are morally upright, we can let them decide everything
+If people have too many different ways of thinking, society will be chaotic <==> If people have too many different ways of thinking, society will be chaotic
+The government should maintain ownership of major state-owned enterprises <==> The government should maintain ownership of major state-owned enterprises
+The national government should have more authority over local decisions than it does now <==> The local government should have more authority over local decisions than it does now
+Our country should defend our way of life instead of becoming more and more like other countries <==> Our country should defend our way of life instead of becoming more and more like other countries
+For the sake of the national community/society, the individual should be prepared to sacrifice his personal interest <==> For the sake of the national community/society, the individual should be prepared to sacrifice
+The state is like a big machine and the individual is but a small cog, with no independent status <==> Marital Status
+The most important thing for a political leader is to accomplish his goals even if he has to ignore the established proc <==> The most important thing for political leaders is to accomplish their goals even if they have to ignore the established procedure
+If a political leader really believes in his position, he should refuse to compromise regardless of how many people disa <==> How many people live in this household?
+A political leader should tolerate the views of those who challenge his political ideals <==> Contacted officials of political parties or other political organizations
+A political leader should not tolerate the views of those who challenge his political ideals <==> Contacted officials of political parties or other political organizations
+As long as a political leader enjoys majority support, he should implement his own agenda and disregard the view of the <==> If a government policy serves the interests of the majority of people, I should support it
+Interviewer_s number                                         <==> Number of formal group
+Is this the first questionnaire the interviewer have completed? <==> Is this the first questionnaire interviewers have completed?
+Interviewer_s gender                                         <==> Gender
+Interviewer_s age                                            <==> Age
+Presence of others other than the respondent while interviewing <==> Others
+Has the respondent ever refused to be interviewed during the whole process? <==> Has the respondent ever refused to be interviewed during the whole process?
+Has the respondent ever felt impatient during the interview? <==> Has the respondent ever felt impatient during the interview?
+How cooperative was the respondent during the interview?     <==> How cooperative was the respondent during the interview?
+date of interview: month                                     <==> Date of interview: month
+date of interview: day                                       <==> Date of interview: day
+date of interview: year                                      <==> Date of interview: year
+Was the interview conducted with the assisance of an interpreter <==> Was the interview conducted with the assistance of an interpreter?
+What is the condition of the road leading to interview's residence <==> What is the condition of the road leading to the interviewee's residence?
+How do rate the sanitary condition in the public area in the interviewee's nearby neighborhood <==> What is the condition of the road leading to the interviewee's residence?
+Tell us whetherthe interviewee's residence has public water supply <==> What is the condition of the road leading to the interviewee's residence?
+Tell us whetherthe interviewee's residence has electricity   <==> What is the condition of the road leading to the interviewee's residence?
+Walking distance between the nearest public transportation stop and the respondent's house <==> How far is it between the nearest public transportation stop and the respondent's house?
+weight                                                       <==> Country Code
+weight for age (recommended)                                 <==> Age
+weight                                                       <==> Country Code
+weight for sex, age, region                                  <==> Age
+weight                                                       <==> Country Code
+weight                                                       <==> Country Code
+weight                                                       <==> Country Code
