@@ -479,7 +479,7 @@ merge_response_mapping = {
         999.0: "No Answer",
     },
     "se004": {
-        1.0: " Married",
+        1.0: "Married",
         2.0: "Living-in as married",
         3.0: "Widowed",
         4.0: "Separated",

@@ -14,7 +14,9 @@ COUNTRY = "Japan"
 pd.set_option("display.max_rows", 100, "display.max_columns", 100)
 
 df1, meta = pyreadstat.read_sav(
-    os.path.join("../00_source_data/W1 Merged Data/Wave.1_Data/Merge/Wave1_20170906.sav")
+    os.path.join(
+        "../00_source_data/W1 Merged Data/Wave.1_Data/Merge/Wave1_20170906.sav"
+    )
 )
 # df1.head(10)
 # %%
@@ -26,7 +28,7 @@ imp_vars = pd.read_csv(
 imp_cols = imp_vars[imp_vars["ABS1_Coding_name"] != "na"]["ABS1_Coding_name"].tolist()
 
 #%%
-kickout = ['se004', 'country']
+kickout = ["se004", "country", "se002", "se003a", "se005"]
 imp_cols = [x for x in imp_cols if x not in kickout]
 
 # %%
@@ -46,21 +48,24 @@ df.rename(merge_column_mapping, axis=1, inplace=True)
 df.head()
 # %%
 
-df = df.drop("idnumber", axis = 1)
+df = df.drop("idnumber", axis=1)
 
+# %%
+
+df.columns
 # %%
 
 cat_cols = [
     "country",
-    "area",
     "urban_rural",
-    "grtokyo50",
-    "grkansai30",
-    "citysize",
-    "gender",
+    "agegroup",
+    "age",
     "maritalstatus",
+    "married",
     "education",
-    "income",
+    "educationyear",
+    "gender",
+    "income_quantile",
     "q007",
     "q008",
     "q009",
@@ -78,22 +83,13 @@ cat_cols = [
     "q127",
 ]
 
-int_cols = [
-    "yrsurvey",
-    "month",
-    "day",
-    "time",
-    "age"
-]
+fl_cols = ["yrsurvey", "age"]
 
 
 #%%
 
-df2 = df2.drop("country", axis=1)
-df2['country'] = COUNTRY
-
 for catcol in cat_cols:
-    df2[catcol] = df2[catcol].astype("category")
+    df[catcol] = df[catcol].astype("category")
 
-for intcol in int_cols:
-    df2[intcol] = df2[intcol].astype("int")
+for flcol in fl_cols:
+    df[flcol] = df[flcol].astype("float")
