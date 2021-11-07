@@ -82,6 +82,7 @@ w2_vars_to_drop = [
     "language",
     "generations",
     "q42",
+    "q54",
     "maritalstatus",
     "num_formal_group",
     "age",
@@ -92,20 +93,13 @@ df = df.drop(w2_vars_to_drop, axis=1)
 w2_to_drop_per_country = {
     "Hong Kong": ["q142", "q144", "q118", "q82", "q80", "q18"],
     "Korea": ["q80", "q59", "q18"],
-    "Mainland China": ["q18", "q54", "q80", "q83", "q99"],
+    "Mainland China": ["q18", "q80", "q83", "q99"],
 }
 
 #%%
 dfs = {country: df.query("country == @country") for country in df["country"].unique()}
 
-
 #%%
-custom_to_q2text = {q1num_to_custom.get(key): w1w2_matching.get(key) for key, _ in w1w2_matching.items()}
-q2text_to_q2num = {v: k for k, v in meta2.column_names_to_labels.items()}
-q2num_to_q2text = {val: key for key, val in q2text_to_q2num.items()}
-
-
-
 
 to_rename = [x for x in df.columns if x.startswith("q")]
 
