@@ -8,7 +8,7 @@ import matplotlib_inline
 from sklearn.preprocessing import OrdinalEncoder, OneHotEncoder, MinMaxScaler
 from sklearn.decomposition import FactorAnalysis, PCA
 from sklearn.impute import SimpleImputer, KNNImputer
-
+from data_focus import q1num_to_custom, 
 
 matplotlib_inline.backend_inline.set_matplotlib_formats("svg")
 
@@ -25,13 +25,17 @@ q_cols = [col for col in df.columns if col.startswith("q")]
 
 #%%
 from ordinal_orders import var_to_order_mapper
+df
+var_to_order_mapper_qoi = {q1num_to_custom.get(k, k): v for k, v in var_to_order_mapper.items()}
 
+# for k, v in var_to_order_mapper.items():
+#     print(k, q1num_to_custom.get(k, k), v)
 
 # Setting the order
-for var, order in var_to_order_mapper.items():
+for var, order in var_to_order_mapper_qoi.items():
     df[var] = df[var].cat.reorder_categories(order)
-
 subset = df[q_cols].copy()
+
 #%%
 
 
@@ -122,7 +126,7 @@ subset_encoded = (
     .pipe(scale_numeric, float_cols, True)
 )
 
-subset_encoded = subset_encoded.drop("q062", axis=1)
+subset_encoded = subset_encoded.drop("qoi029", axis=1)
 # subset_encoded.to_parquet(f"../20_intermediate_files/W1_countries/qcols_encoded_{COUNTRY}.parquet")
 
 #%%
