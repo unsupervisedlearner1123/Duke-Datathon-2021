@@ -1,11 +1,11 @@
 # %%
+import matplotlib
 import pandas as pd
 import numpy as np
 import pyreadstat
 import os
 import matplotlib_inline
-
-matplotlib_inline.backend_inline.set_matplotlib_formats("svg")
+matplotlib_inline.backend_inline.set_matplotlib_formats('svg')
 
 # %%
 # read in the data
@@ -18,15 +18,15 @@ import matplotlib.pyplot as plt
 import seaborn as sns
 
 #%%
-fig, ax = plt.subplots(figsize=(10, 20))
-sns.heatmap(df1.groupby("country").apply(lambda x: x.isna().mean()).T)
+fig, ax = plt.subplots(figsize=(20, 4))
+sns.heatmap(df1.groupby("country").apply(lambda x: x.isna().mean()), ax=ax)
 
 #%%
-fig, ax = plt.subplots(figsize=(10, 20))
+fig, ax = plt.subplots(figsize=(20, 10))
 consideration_set = df1["country"].unique().tolist()
 df2 = df2.loc[df2["country"].isin(consideration_set)]
 df2["country"] = df2["country"].cat.remove_unused_categories()
-sns.heatmap(df2.groupby("country").apply(lambda x: x.isna().mean()).T)
+sns.heatmap(df2.groupby("country").apply(lambda x: x.isna().mean()))
 
 #%%
 # variables to drop for W2

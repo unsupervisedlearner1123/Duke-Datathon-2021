@@ -18,7 +18,7 @@ for country in countries:
     with open(f"../30_results/W1/{country}.txt", "r") as f:
         lines = f.read()
 
-    r2_pattern = re.compile(r"(?<!Adj. )R-squared:\s*(?P<r2>[01].\d+)")
+    r2_pattern = re.compile(r"(?<!Adj\. )R-squared:\s*(?P<r2>[01].\d+)")
     found = r2_pattern.findall(lines)
 
     datalist.append(
