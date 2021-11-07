@@ -5,12 +5,15 @@ import seaborn as sns
 import matplotlib.pyplot as plt
 from sklearn.cluster import AgglomerativeClustering, KMeans
 import matplotlib_inline
-from sklearn.preprocessing import OrdinalEncoder, OneHotEncoder
+from sklearn.preprocessing import OrdinalEncoder, OneHotEncoder, MinMaxScaler
 from sklearn.decomposition import FactorAnalysis, PCA
 from sklearn.impute import SimpleImputer, KNNImputer
 
 
 matplotlib_inline.backend_inline.set_matplotlib_formats("svg")
+
+#%%
+
 
 #%%
 COUNTRY = "Taiwan"
@@ -23,12 +26,12 @@ q_cols = [col for col in df.columns if col.startswith("q")]
 #%%
 from ordinal_orders import var_to_order_mapper
 
-subset = df[q_cols].copy()
 
 # Setting the order
 for var, order in var_to_order_mapper.items():
-    subset[var] = subset[var].cat.reorder_categories(order)
+    df[var] = df[var].cat.reorder_categories(order)
 
+subset = df[q_cols].copy()
 #%%
 
 
@@ -76,18 +79,20 @@ def start_pipeline(data: pd.DataFrame):
 #     data[columns] = _cat_encoder.transform(data[columns])  # Ordinal Encode
 #     return data
 
+
 def encode_categoricals(data: pd.DataFrame, columns, refit):
     for catcol in columns:
         data[catcol] = data[catcol].cat.codes
     return data
 
-# def scale_numeric(data: pd.DataFrame, columns, refit):
-#     global _scaler_obj
-#     if refit:
-#         _scaler_obj = MinMaxScaler()
-#         _scaler_obj.fit(data[columns])
-#     data[columns] = _scaler_obj.transform(data[columns])
-#     return data
+
+def scale_numeric(data: pd.DataFrame, columns, refit):
+    global _scaler_obj
+    if refit:
+        _scaler_obj = MinMaxScaler()
+        _scaler_obj.fit(data[columns])
+    data[columns] = _scaler_obj.transform(data[columns])
+    return data
 
 
 def simple_impute_numeric(data: pd.DataFrame, columns, refit, na_value):
@@ -96,7 +101,7 @@ def simple_impute_numeric(data: pd.DataFrame, columns, refit, na_value):
         _imputer_obj = KNNImputer(missing_values=na_value, n_neighbors=5)
         # _imputer_obj.fit(data[columns])
         _imputer_obj.fit(data)
-        print("FITTED!")
+        # print("FITTED!")
     # data[columns] = _imputer_obj.transform(data[columns])
     _colnames = data.columns
     data = _imputer_obj.transform(data)
@@ -110,26 +115,39 @@ def simple_impute_numeric(data: pd.DataFrame, columns, refit, na_value):
 
 #%%
 subset_encoded = (
-    subset # pd.get_dummies(subset, drop_first=True)
-    .pipe(start_pipeline)
+    subset.pipe(start_pipeline)  # pd.get_dummies(subset, drop_first=True)
     .pipe(encode_categoricals, columns=cols_to_ohe, refit=True)
     .pipe(simple_impute_numeric, float_cols, True, na_value=np.nan)
     .pipe(simple_impute_numeric, cat_cols, True, na_value=-1)
+    .pipe(scale_numeric, float_cols, True)
 )
 
+subset_encoded = subset_encoded.drop("q062", axis=1)
 # subset_encoded.to_parquet(f"../20_intermediate_files/W1_countries/qcols_encoded_{COUNTRY}.parquet")
 
 #%%
+
+# evrs = []
+# for ncomp in range(2, 25):
+#     pca = PCA(n_components=ncomp)
+#     pca.fit(subset_encoded)
+#     evrs.append(pca.explained_variance_ratio_.sum())
+
+# plt.plot(range(2, 25), evrs)
+
+pca = PCA(n_components=59)
+pca.fit(subset_encoded)
+plt.plot(pca.explained_variance_ratio_[:15])
+
+#%%
 # fa = FactorAnalysis(n_components=4, rotation="varimax")
-fa = FactorAnalysis(n_components=20)
+fa = FactorAnalysis(n_components=3)
 preds = fa.fit_transform(subset_encoded)
 
 #%%
-fa.components_[0].argmax()
-#%%
 
 
-fig, ax = plt.subplots(figsize=(10, 2))
+fig, ax = plt.subplots(figsize=(15, 2))
 sns.heatmap(
     pd.DataFrame(fa.components_, columns=subset_encoded.columns),
     # annot=True,
@@ -147,26 +165,51 @@ from sklearn.preprocessing import OneHotEncoder, MinMaxScaler, OrdinalEncoder
 from sklearn.impute import SimpleImputer
 from sklearn.model_selection import train_test_split
 
-xtrain, xtest, ytrain, ytest = train_test_split(df, y, test_size=0.3, random_state=42)
+predictors = [
+    # "country",
+    "urban_rural",
+    "gender",
+    "agegroup",
+    "married",
+    "education",
+    "income_quintile",
+    "religion",
+    "socialstatus",
+]
+xtrain, xtest, ytrain, ytest = train_test_split(df[predictors], y, test_size=0.3, random_state=42)
+
+xtrain = (
+    xtrain.pipe(start_pipeline)
+    .pipe(encode_categoricals, columns=predictors, refit=True)
+    .pipe(simple_impute_numeric, predictors, True, na_value=-1)
+)
+
+xtest = (
+    xtest.pipe(start_pipeline)
+    .pipe(encode_categoricals, columns=predictors, refit=False)
+    .pipe(simple_impute_numeric, predictors, False, na_value=-1)
+)
+
+
 #%%
 from sklearn.linear_model import LinearRegression
 from sklearn.tree import DecisionTreeRegressor
 
-lr = LinearRegression()
-lr.fit(xtrain, ytrain)
-preds = lr.predict(xtest)
+# lr = LinearRegression()
+# lr.fit(xtrain, ytrain)
+# preds = lr.predict(xtest)
 
-#%%
-dt = DecisionTreeRegressor()
-dt.fit(xtrain, ytrain)
-preds = dt.predict(xtest)
+# #%%
+# dt = DecisionTreeRegressor()
+# dt.fit(xtrain, ytrain)
+# preds = dt.predict(xtest)
 
-#%%
-from lightgbm import LGBMRegressor
+# #%%
+# from lightgbm import LGBMRegressor
 
-lgbm = LGBMRegressor(n_estimators=200)
-lgbm.fit(xtrain, ytrain)
-preds = lgbm.predict(xtest)
+# lgbm = LGBMRegressor(n_estimators=200)
+# lgbm.fit(xtrain, ytrain)
+# preds = lgbm.predict(xtest)
 
 #%%
 sns.jointplot(x=ytest, y=preds, kind="hex")

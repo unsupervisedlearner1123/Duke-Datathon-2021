@@ -85,5 +85,17 @@ var_to_order_mapper = {
     "q142": ["Strongly disagree", "Somewhat disagree", "Somewhat agree", "Strongly agree"],
     "q143": ["Strongly disagree", "Somewhat disagree", "Somewhat agree", "Strongly agree"],
     "q145": ["Strongly disagree", "Somewhat disagree", "Somewhat agree", "Strongly agree"],
+    "education": [
+        "No formal education",
+        "Incomplete elementary school",
+        "Complete elementary school",
+        "Incomplete secondary school",
+        "Complete secondary school",
+        "Incomplete high school",
+        "Complete high school",
+        "Some university_college education",
+        "University_college degree",
+        "Post graduate degree",
+    ],
 }
 
