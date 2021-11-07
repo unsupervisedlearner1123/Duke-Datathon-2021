@@ -1,0 +1,151 @@
+################################################################################
+################################## Hong Kong ###################################
+################################################################################
+
+================================== Factor #0 ===================================
+---------------------------- Most Positive Loadings ----------------------------
+ - How much impact do you feel government policies have on your daily life?
+ - People with little or no education should have as much say in politics as highly-educated people
+ - How interested would you say you are interested in politics?
+ - contacted elected legislative representatives at any level?
+ - Contacted political parties or other political organizations?
+---------------------------- Most Negative Loadings ----------------------------
+ - If people have too many different ways of thinking, society will be chaotic
+ - You can generally trust the people who run our government to do what is right
+ - Government leaders are like the head of a family; we should all follow their decisions
+ - How much trust do you have in local government?
+ - How satisfied or dissatisfied are you with the current government?
+
+================================== Factor #1 ===================================
+---------------------------- Most Positive Loadings ----------------------------
+ - What do you think will be the state of our country's economic condition five years from now?
+ - How would you compare the current economic condition of your family with what it was five years ago?
+ - What do you think the economic situation of your family will be five years from now?
+ - How satisfied or dissatisfied are you with the current government?
+ - How much trust do you have in local government?
+---------------------------- Most Negative Loadings ----------------------------
+ - We should get rid of parliament and elections and have a strong leader decide things
+ - When judges decide important cases, they should accept the view of the executive branch
+ - Harmony of the community will be disrupted if people organize lots of groups
+ - choose between democracy and economic development?
+ - If people have too many different ways of thinking, society will be chaotic
+
+================================== Factor #2 ===================================
+---------------------------- Most Positive Loadings ----------------------------
+ - contacted elected legislative representatives at any level?
+ - Contacted political parties or other political organizations?
+ - How interested would you say you are interested in politics?
+ - How much impact do you feel government policies have on your daily life?
+ - Contacted officials to express your opinions at higher level?
+---------------------------- Most Negative Loadings ----------------------------
+ - How satisfied or dissatisfied are you with the current government?
+ - Politics and government seems so complicated that a person like me can't really understand what is going on
+ - How widespread corruption in your local/municipal government?
+ - How would you compare the current economic condition of your family with what it was five years ago?
+ - How would you describe the change in the economic condition of our country over the past five years?
+
+
+============================= Predicting Factor #0 =============================                            OLS Regression Results                            
+==============================================================================
+Dep. Variable:               factor_0   R-squared:                       0.185
+Model:                            OLS   Adj. R-squared:                  0.177
+Method:                 Least Squares   F-statistic:                     25.95
+Date:                Sun, 07 Nov 2021   Prob (F-statistic):           4.02e-32
+Time:                        06:02:30   Log-Likelihood:                -1022.2
+No. Observations:                 811   AIC:                             2060.
+Df Residuals:                     803   BIC:                             2098.
+Df Model:                           7                                         
+Covariance Type:            nonrobust                                         
+===================================================================================
+                      coef    std err          t      P>|t|      [0.025      0.975]
+-----------------------------------------------------------------------------------
+Intercept          -0.0802      0.030     -2.700      0.007      -0.139      -0.022
+urban_rural        -0.1604      0.059     -2.700      0.007      -0.277      -0.044
+gender              0.0669      0.062      1.085      0.278      -0.054       0.188
+agegroup           -0.0382      0.016     -2.331      0.020      -0.070      -0.006
+married            -0.0818      0.084     -0.972      0.332      -0.247       0.083
+education           0.1385      0.016      8.569      0.000       0.107       0.170
+income_quintile    -0.0069      0.022     -0.309      0.757      -0.051       0.037
+religion            0.0341      0.016      2.114      0.035       0.002       0.066
+socialstatus       -0.1040      0.039     -2.661      0.008      -0.181      -0.027
+==============================================================================
+Omnibus:                       43.431   Durbin-Watson:                   1.884
+Prob(Omnibus):                  0.000   Jarque-Bera (JB):               71.095
+Skew:                           0.409   Prob(JB):                     3.65e-16
+Kurtosis:                       4.198   Cond. No.                     3.23e+16
+==============================================================================
+
+Notes:
+[1] Standard Errors assume that the covariance matrix of the errors is correctly specified.
+[2] The smallest eigenvalue is 6.55e-29. This might indicate that there are
+strong multicollinearity problems or that the design matrix is singular.
+
+============================= Predicting Factor #1 =============================                            OLS Regression Results                            
+==============================================================================
+Dep. Variable:               factor_1   R-squared:                       0.169
+Model:                            OLS   Adj. R-squared:                  0.162
+Method:                 Least Squares   F-statistic:                     23.29
+Date:                Sun, 07 Nov 2021   Prob (F-statistic):           6.96e-29
+Time:                        06:02:31   Log-Likelihood:                -990.57
+No. Observations:                 811   AIC:                             1997.
+Df Residuals:                     803   BIC:                             2035.
+Df Model:                           7                                         
+Covariance Type:            nonrobust                                         
+===================================================================================
+                      coef    std err          t      P>|t|      [0.025      0.975]
+-----------------------------------------------------------------------------------
+Intercept          -0.1791      0.029     -6.268      0.000      -0.235      -0.123
+urban_rural        -0.3581      0.057     -6.268      0.000      -0.470      -0.246
+gender              0.0199      0.059      0.336      0.737      -0.096       0.136
+agegroup            0.0284      0.016      1.806      0.071      -0.002       0.059
+married            -0.1172      0.081     -1.447      0.148      -0.276       0.042
+education           0.1204      0.016      7.747      0.000       0.090       0.151
+income_quintile     0.0123      0.022      0.569      0.570      -0.030       0.055
+religion            0.0267      0.016      1.719      0.086      -0.004       0.057
+socialstatus        0.1389      0.038      3.697      0.000       0.065       0.213
+==============================================================================
+Omnibus:                       18.179   Durbin-Watson:                   2.084
+Prob(Omnibus):                  0.000   Jarque-Bera (JB):               20.734
+Skew:                          -0.298   Prob(JB):                     3.15e-05
+Kurtosis:                       3.509   Cond. No.                     3.23e+16
+==============================================================================
+
+Notes:
+[1] Standard Errors assume that the covariance matrix of the errors is correctly specified.
+[2] The smallest eigenvalue is 6.55e-29. This might indicate that there are
+strong multicollinearity problems or that the design matrix is singular.
+
+============================= Predicting Factor #2 =============================                            OLS Regression Results                            
+==============================================================================
+Dep. Variable:               factor_2   R-squared:                       0.042
+Model:                            OLS   Adj. R-squared:                  0.034
+Method:                 Least Squares   F-statistic:                     5.088
+Date:                Sun, 07 Nov 2021   Prob (F-statistic):           1.14e-05
+Time:                        06:02:31   Log-Likelihood:                -987.37
+No. Observations:                 811   AIC:                             1991.
+Df Residuals:                     803   BIC:                             2028.
+Df Model:                           7                                         
+Covariance Type:            nonrobust                                         
+===================================================================================
+                      coef    std err          t      P>|t|      [0.025      0.975]
+-----------------------------------------------------------------------------------
+Intercept          -0.0859      0.028     -3.020      0.003      -0.142      -0.030
+urban_rural        -0.1719      0.057     -3.020      0.003      -0.284      -0.060
+gender              0.2629      0.059      4.455      0.000       0.147       0.379
+agegroup            0.0105      0.016      0.672      0.501      -0.020       0.041
+married             0.1914      0.081      2.374      0.018       0.033       0.350
+education           0.0299      0.015      1.932      0.054      -0.000       0.060
+income_quintile    -0.0334      0.022     -1.554      0.121      -0.076       0.009
+religion            0.0070      0.015      0.452      0.651      -0.023       0.037
+socialstatus       -0.0017      0.037     -0.044      0.965      -0.075       0.072
+==============================================================================
+Omnibus:                      547.884   Durbin-Watson:                   1.921
+Prob(Omnibus):                  0.000   Jarque-Bera (JB):             6145.219
+Skew:                           3.008   Prob(JB):                         0.00
+Kurtosis:                      15.069   Cond. No.                     3.23e+16
+==============================================================================
+
+Notes:
+[1] Standard Errors assume that the covariance matrix of the errors is correctly specified.
+[2] The smallest eigenvalue is 6.55e-29. This might indicate that there are
+strong multicollinearity problems or that the design matrix is singular.
