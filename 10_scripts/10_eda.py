@@ -3,7 +3,7 @@ import pandas as pd
 import seaborn as sns
 import matplotlib.pyplot as plt
 
-df = pd.read_parquet("../20_intermediate_files/mergeddata.parquet")
+df = pd.read_parquet("../20_intermediate_files/W1mergeddata.parquet")
 
 
 #%%

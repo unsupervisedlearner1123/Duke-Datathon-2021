@@ -5,7 +5,7 @@ import matplotlib.pyplot as plt
 from sklearn.cluster import AgglomerativeClustering, KMeans
 
 #%%
-df = pd.read_parquet("../20_intermediate_files/mergeddata.parquet")
+df = pd.read_parquet("../20_intermediate_files/W1mergeddata.parquet")
 
 #%%
 q_cols = [col for col in df.columns if col.startswith("q")]
