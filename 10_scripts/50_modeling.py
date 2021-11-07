@@ -172,7 +172,7 @@ preds = fa.fit_transform(subset_encoded)
 #%%
 
 
-fig, ax = plt.subplots(figsize=(15, 2))
+fig, ax = plt.subplots(figsize=(15, 8))
 sns.heatmap(
     pd.DataFrame(fa.components_, columns=subset_encoded.columns),
     # annot=True,
