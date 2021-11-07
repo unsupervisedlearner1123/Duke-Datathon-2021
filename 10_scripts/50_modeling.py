@@ -179,6 +179,7 @@ sns.heatmap(
     ax=ax,
 )
 
+plt.tight_layout()
 plt.savefig(f"../30_results/chinamainland_w1.png", dpi=300, facecolor="w")
 #%%
 with open(f"../30_results/W1/{COUNTRY}.txt", "a") as f:
