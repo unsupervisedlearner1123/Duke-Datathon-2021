@@ -1,5 +1,7 @@
 # Duke Datathon 2021 💻💙 <img width=90 align="right" src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e6/Duke_University_logo.svg/1024px-Duke_University_logo.svg.png">
-This is the repo for the Duke Annual Datathon, 2021.
+
+## Insights from the Asian Barometer Survey: A Latent Factor Approach
+This is the team repository for the Duke Annual Datathon, 2021.
 
 ## The Asian Barometer Survey
 Asian Barometer Survey (ABS) is a series of random surveys conducted across 18 Asian countries conducted by the National Taiwan University East Asia Democratic Studies department to gather data on political and socio-economic opinions of individuals from each country. These surveys have been through several rounds (or waves) over the past two decades and the data provided for the purpose of this analysis spans over two waves - the first wave from 2001 to 2003, and the second wave from 2005 to 2008. The ABS is aimed to gather public opinions, foster conversations between scholars, and share any insights with various organizations (Fu Hu Center, 2021). We aim to conduct cross-wave analyses and augment the ABS data by generating latent factors that can be used as meaningful research objectives. In order to do so, we statistically derive consolidated indicators to represent abstract individual characteristics like “faith in government” or “economic optimism”. We intend to uncover insights to suggest further deep-dives that scholars can leverage to answer specific questions, such as whether demographic variables are significant predictors of these factors. 
