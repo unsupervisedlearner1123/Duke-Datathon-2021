@@ -17,6 +17,42 @@ df = pd.read_parquet("../20_intermediate_files/W2focusdata.parquet")
 df = df[~df.country.isin(["Cambodia", "Malaysia", "Indonesia", "Singapore", "Vietnam"])]
 
 # %%
+# rename religion to religion_code
+religion_w1w2_mapper = {
+    "None": "None",
+    "Buddhist": "Buddhism",
+    "Roman Catholic": "Roman Catholics",
+    "Shinto": "Shinto",
+    "Cannot choose": "Others",
+    "Other": "Others",
+    # np.nan: np.nan
+    "Protestant": "Protestantism",
+    "Traditional folk religion (Shenism)": "Other Folk Religio",
+    "Taoism": "Daoism",
+    "Other Asian religions": "Others",
+    "Islam": "Islam",
+    "Iglesia Ni Cristo": "Others",
+    "Baptist": "Others",
+    "Aglipayan": "Others",
+    "Jehovah Witness": "Others",
+    "Born Again": "Born again",
+    "Dating Daan": "Others",
+    "Seventh Day Adventist": "Others",
+    "Evangelical": "Others",
+    "Methodist": "Others",
+    "Mormons": "Others",
+    "Anglican": "Others",
+    "Pentecostal": "Others",
+    "Grace Gospel of Church": "Others",
+    "Epescopal": "Others",
+    "Tiruray": "Others",
+    "I-Kuan Tao": "Others",
+    "Sunni": "Islam",
+    "Shia": "Islam",
+}
+df.religion = df.religion.map(religion_w1w2_mapper)
+
+# %%
 w2_vars_to_drop = ["language", "generations", "q42", "maritalstatus", "num_formal_group"]
 df = df.drop(w2_vars_to_drop, axis=1)
 
