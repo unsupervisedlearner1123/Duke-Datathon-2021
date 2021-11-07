@@ -66,10 +66,14 @@ q2num_to_q2text = {val: key for key, val in q2text_to_q2num.items()}
 custom_to_q2num = {q1num_to_custom.get(key): key for key, _ in w1w2_matching.items()}
 q2num_to_custom = {val: key for key, val in custom_to_q2num.items()}
 
+
+#%%
+q1num_to_q1_text = {val: key for key, val in q1text_to_q1num.items()}
+custom_to_q1_text = {key: q1num_to_q1_text.get(custom_to_q1num.get(key)) for key, value in custom_to_q1num.items()}
+custom_to_q1_text
 # %%
 
-# %%
-import json
-with open("../20_intermediate_files/w1_questions.json", "w") as write_file:
-    json.dump(q1num_to_custom, write_file)
+# import json
+# with open("../20_intermediate_files/w1_questions.json", "w") as write_file:
+#     json.dump(q1num_to_custom, write_file)
 # %%

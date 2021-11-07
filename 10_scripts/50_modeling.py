@@ -8,7 +8,12 @@ import matplotlib_inline
 from sklearn.preprocessing import OrdinalEncoder, OneHotEncoder, MinMaxScaler
 from sklearn.decomposition import FactorAnalysis, PCA
 from sklearn.impute import SimpleImputer, KNNImputer
-
+from data_focus import q1num_to_custom, custom_to_q1_text
+from sklearn.preprocessing import OneHotEncoder, MinMaxScaler, OrdinalEncoder
+from sklearn.impute import SimpleImputer
+from sklearn.model_selection import train_test_split
+from sklearn.linear_model import LinearRegression
+from sklearn.tree import DecisionTreeRegressor
 
 matplotlib_inline.backend_inline.set_matplotlib_formats("svg")
 
@@ -16,7 +21,7 @@ matplotlib_inline.backend_inline.set_matplotlib_formats("svg")
 
 
 #%%
-COUNTRY = "Taiwan"
+COUNTRY = "Mainland China"
 df = pd.read_parquet(f"../20_intermediate_files/W1_countries/{COUNTRY}.parquet")
 
 #%%
@@ -26,12 +31,20 @@ q_cols = [col for col in df.columns if col.startswith("q")]
 #%%
 from ordinal_orders import var_to_order_mapper
 
+df
+var_to_order_mapper_qoi = {q1num_to_custom.get(k, k): v for k, v in var_to_order_mapper.items()}
+
+# for k, v in var_to_order_mapper.items():
+#     print(k, q1num_to_custom.get(k, k), v)
 
 # Setting the order
-for var, order in var_to_order_mapper.items():
-    df[var] = df[var].cat.reorder_categories(order)
-
+for var, order in var_to_order_mapper_qoi.items():
+    try:
+        df[var] = df[var].cat.reorder_categories(order)
+    except KeyError:
+        print(f"{var} not found in dataframe")
 subset = df[q_cols].copy()
+
 #%%
 
 
@@ -122,8 +135,12 @@ subset_encoded = (
     .pipe(scale_numeric, float_cols, True)
 )
 
-subset_encoded = subset_encoded.drop("q062", axis=1)
-# subset_encoded.to_parquet(f"../20_intermediate_files/W1_countries/qcols_encoded_{COUNTRY}.parquet")
+try:
+    subset_encoded = subset_encoded.drop("qoi029", axis=1)
+except KeyError:
+    print("qoi029 not found in dataframe")
+
+subset_encoded.to_parquet(f"../20_intermediate_files/W1_countries/qcols_encoded_{COUNTRY}.parquet")
 
 #%%
 
@@ -135,13 +152,14 @@ subset_encoded = subset_encoded.drop("q062", axis=1)
 
 # plt.plot(range(2, 25), evrs)
 
-pca = PCA(n_components=59)
+pca = PCA(n_components=subset.shape[-1] - 1)
 pca.fit(subset_encoded)
 plt.plot(pca.explained_variance_ratio_[:15])
 
 #%%
+NFAC = 3
 # fa = FactorAnalysis(n_components=4, rotation="varimax")
-fa = FactorAnalysis(n_components=3)
+fa = FactorAnalysis(n_components=NFAC)
 preds = fa.fit_transform(subset_encoded)
 
 #%%
@@ -154,16 +172,24 @@ sns.heatmap(
     ax=ax,
 )
 
+#%%
+for factor in range(NFAC):
+    _s = f" Factor #{factor} "
+    print(f"{_s:=^80}")
+    highest = fa.components_[factor].argsort()[-5:]
+    lowest = fa.components_[factor].argsort()[:5]
+
+    print(f"{' Most Positive Loadings ':-^80}")
+    for idx in highest[::-1]:
+        print(f" - {custom_to_q1_text.get(subset_encoded.columns[idx])}")
+    print(f"{' Most Negative Loadings ':-^80}")
+    for idx in lowest[::-1]:
+        print(f" - {custom_to_q1_text.get(subset_encoded.columns[idx])}")
+    print()
+
 
 #%%
-FACTOR_TO_PREDICT = 0
-y = fa.transform(subset_encoded)[:, FACTOR_TO_PREDICT]
 
-#%%
-from sklearn.compose import ColumnTransformer
-from sklearn.preprocessing import OneHotEncoder, MinMaxScaler, OrdinalEncoder
-from sklearn.impute import SimpleImputer
-from sklearn.model_selection import train_test_split
 
 predictors = [
     # "country",
@@ -176,40 +202,48 @@ predictors = [
     "religion",
     "socialstatus",
 ]
-xtrain, xtest, ytrain, ytest = train_test_split(df[predictors], y, test_size=0.3, random_state=42)
-
-xtrain = (
-    xtrain.pipe(start_pipeline)
-    .pipe(encode_categoricals, columns=predictors, refit=True)
-    .pipe(simple_impute_numeric, predictors, True, na_value=-1)
-)
-
-xtest = (
-    xtest.pipe(start_pipeline)
-    .pipe(encode_categoricals, columns=predictors, refit=False)
-    .pipe(simple_impute_numeric, predictors, False, na_value=-1)
-)
-
 
 #%%
-from sklearn.linear_model import LinearRegression
-from sklearn.tree import DecisionTreeRegressor
+FACTOR_TO_PREDICT = 0
+fig, ax = plt.subplots(2, 3, figsize=(15, 10), sharex=True, sharey=True)
+for FACTOR_TO_PREDICT in range(3):
+    y = fa.transform(subset_encoded)[:, FACTOR_TO_PREDICT]
 
-# lr = LinearRegression()
-# lr.fit(xtrain, ytrain)
-# preds = lr.predict(xtest)
+    xtrain, xtest, ytrain, ytest = train_test_split(
+        df[predictors], y, test_size=0.3, random_state=42
+    )
 
-# #%%
-# dt = DecisionTreeRegressor()
-# dt.fit(xtrain, ytrain)
-# preds = dt.predict(xtest)
+    xtrain = (
+        xtrain.pipe(start_pipeline)
+        .pipe(encode_categoricals, columns=predictors, refit=True)
+        .pipe(simple_impute_numeric, predictors, True, na_value=-1)
+    )
 
-# #%%
-# from lightgbm import LGBMRegressor
+    xtest = (
+        xtest.pipe(start_pipeline)
+        .pipe(encode_categoricals, columns=predictors, refit=False)
+        .pipe(simple_impute_numeric, predictors, False, na_value=-1)
+    )
 
-# lgbm = LGBMRegressor(n_estimators=200)
-# lgbm.fit(xtrain, ytrain)
-# preds = lgbm.predict(xtest)
+    lr = LinearRegression()
+    lr.fit(xtrain, ytrain)
+    preds_lr = lr.predict(xtest)
 
-#%%
-sns.jointplot(x=ytest, y=preds, kind="hex")
+    dt = DecisionTreeRegressor()
+    dt.fit(xtrain, ytrain)
+    preds_dt = dt.predict(xtest)
+
+    # #%%
+    # from lightgbm import LGBMRegressor
+
+    # lgbm = LGBMRegressor(n_estimators=200)
+    # lgbm.fit(xtrain, ytrain)
+    # preds = lgbm.predict(xtest)
+
+    # sns.jointplot(x=ytest, y=preds, kind="hex", ax=ax)
+    sns.scatterplot(x=ytest, y=preds_lr, ax=ax[0, FACTOR_TO_PREDICT], color="#00305e", alpha=0.6)
+    sns.scatterplot(x=ytest, y=preds_dt, ax=ax[1, FACTOR_TO_PREDICT], color="#00305e", alpha=0.6)
+    ax[0, FACTOR_TO_PREDICT].set_title("Linear Regression")
+    ax[1, FACTOR_TO_PREDICT].set_title("Decision Tree")
+    ax[0, 0].set_xlabel("Ground Truth")
+    ax[0, 0].set_ylabel("Prediction")
