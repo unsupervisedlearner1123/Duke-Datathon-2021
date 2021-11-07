@@ -9,7 +9,7 @@ df = pd.read_parquet("../20_intermediate_files/W1mergeddata.parquet")
 #%%
 # NA by country x variable
 sns.set_context("talk")
-fig, ax = plt.subplots(figsize=(15, 15))
+fig, ax = plt.subplots(figsize=(15, 5))
 sns.heatmap(df.groupby("country").apply(lambda g: g.isna().mean()).T)
 
 #%%
