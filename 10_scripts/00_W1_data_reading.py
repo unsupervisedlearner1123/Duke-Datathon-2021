@@ -64,6 +64,12 @@ cat_cols = [
     "education",
     "gender",
     "income_quintile",
+    "religion",
+    "generations",
+    "language",
+    "socialstatus",
+    "religion2",
+    "num_formal_group",
     "q007",
     "q008",
     "q009",
@@ -91,6 +97,6 @@ for flcol in fl_cols:
 
 # %%
 # export to parquet
-df.to_parquet("../20_intermediate_files/W1mergeddata.parquet")
+# df.to_parquet("../20_intermediate_files/W1mergeddata.parquet")
 # %%
 # done :)

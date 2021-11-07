@@ -27,6 +27,8 @@ imp_cols = imp_vars[imp_vars["ABS2_Coding_name"] != "na"]["ABS2_Coding_name"].to
 # remove duplicate columns
 kickout = ["country", "q8", "q6", "q5"]
 imp_cols = [x for x in imp_cols if x not in kickout]
+addto = ["fgnum", "se6", "se8b", "se11", "se13"]
+imp_cols.extend(addto)
 
 # %%
 # pick out the important columns
@@ -78,8 +80,27 @@ labels = [
 df["agegroup"] = pd.cut(df["age"], bins=bins, labels=labels, right=False)
 df["agegroup"] = df["agegroup"].cat.add_categories("REFUSED")
 df["age"] = df["age"].astype("string")
-df.loc[df["temp"],"age"] = "REFUSED"
-df.loc[df["temp"],"agegroup"] = "REFUSED"
+df.loc[df["temp"], "age"] = "REFUSED"
+df.loc[df["temp"], "agegroup"] = "REFUSED"
+
+#%%
+# factorize social status to match variables from W1
+statusmap = {
+    1.0: "Lower class",
+    2.0: "Lower class",
+    3.0: "Lower-Middle class",
+    4.0: "Lower-Middle class",
+    5.0: "Middle class",
+    6.0: "Middle class",
+    7.0: "Upper middle class",
+    8.0: "Upper middle class",
+    9.0: "Upper Class",
+    10.0: "Upper Class",
+    97.0: "Don't understand",
+    98.0: "Can't choose",
+    99.0: "Decline to answer",
+}
+df["socialstatus"] = df["socialstatus"].map(statusmap)
 
 #%%
 # set column data types
@@ -98,6 +119,11 @@ cat_cols = [
     "maritalstatus",
     "education",
     "income_quintile",
+    "num_formal_group",
+    "religion",
+    "generations",
+    "language",
+    "socialstatus",
     "q9",
     "q12",
     "q13",
@@ -124,7 +150,7 @@ for catcol in cat_cols:
 
 # %%
 # export to parquet
-# df.to_parquet("../20_intermediate_files/W2mergeddata.parquet")
+df.to_parquet("../20_intermediate_files/W2mergeddata.parquet")
 
 # %%
 # done :)
