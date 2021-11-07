@@ -97,6 +97,6 @@ for flcol in fl_cols:
 
 # %%
 # export to parquet
-# df.to_parquet("../20_intermediate_files/W1mergeddata.parquet")
+df.to_parquet("../20_intermediate_files/W1mergeddata.parquet")
 # %%
 # done :)

@@ -3,6 +3,8 @@ import pandas as pd
 import numpy as np
 import pyreadstat
 import os
+import csv
+
 
 # %%
 # read in the data
@@ -53,14 +55,19 @@ q1num_to_custom = {val: key for key, val in custom_to_q1num.items()}
 q1text_to_q1num = {v: k for k, v in meta.column_names_to_labels.items()}
 q1text_to_q1num
 #%%
-w1w2_matching = {q1text_to_q1num.get(minidict["wave1"]): minidict["wave2"] for minidict in comp.to_dict("records")}
-w1w2_matching
+q1num_to_q2text = {q1text_to_q1num.get(minidict["wave1"].strip()): minidict["wave2"] for minidict in comp.to_dict("records")}
+q1num_to_q2text
 
 #%%
-custom_to_q2text = {q1num_to_custom.get(key): w1w2_matching.get(key) for key, _ in w1w2_matching.items()}
-custom_to_q2num = {q1num_to_custom.get(key): key for key, _ in w1w2_matching.items()}
-q2num_to_custom = {val: key for key, val in custom_to_q2num.items()}
+custom_to_q2text = {q1num_to_custom.get(key): q1num_to_q2text.get(key) for key, _ in q1num_to_q2text.items()}
 
+
+q2text_to_q2num = {v: k for k, v in meta2.column_names_to_labels.items()}
+q2num_to_q2text = {val: key for key, val in q2text_to_q2num.items()}
+
+#%%
+custom_to_q2num = {custom: q2text_to_q2num.get(q2text) for custom, q2text in custom_to_q2text.items()}
+q2num_to_custom = {val: key for key, val in custom_to_q2num.items()}
 
 #%%
 q1num_to_q1_text = {val: key for key, val in q1text_to_q1num.items()}
