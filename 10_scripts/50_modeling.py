@@ -8,7 +8,7 @@ import matplotlib_inline
 from sklearn.preprocessing import OrdinalEncoder, OneHotEncoder, MinMaxScaler
 from sklearn.decomposition import FactorAnalysis, PCA
 from sklearn.impute import SimpleImputer, KNNImputer
-from data_focus import q1num_to_custom, 
+from data_focus import q1num_to_custom, custom_to_q1_text
 
 matplotlib_inline.backend_inline.set_matplotlib_formats("svg")
 
