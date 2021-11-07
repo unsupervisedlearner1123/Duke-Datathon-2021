@@ -150,7 +150,7 @@ for catcol in cat_cols:
 
 # %%
 # export to parquet
-df.to_parquet("../20_intermediate_files/W2mergeddata.parquet")
+# df.to_parquet("../20_intermediate_files/W2mergeddata.parquet")
 
 # %%
 # done :)

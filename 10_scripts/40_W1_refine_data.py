@@ -3,9 +3,11 @@ import pandas as pd
 import numpy as np
 import pyreadstat
 import os
+from data_focus import q1num_to_custom
 
-# import matplotlib_inline
-# matplotlib_inline.backend_inline.set_matplotlib_formats("svg")
+##################################################################################################
+################################# WHEN COMPLETE, RUN RENAME BELOW ################################
+##################################################################################################
 
 # %%
 # read in the data
@@ -18,6 +20,7 @@ w1_vars_to_drop = [
     "num_formal_group",
     "religion2",
     "q031",
+    # "q024", # not very useful
     "age",
     "educationyear",
     "yrsurvey",
@@ -51,14 +54,20 @@ for countryname, dataf in dfs.items():
     dfs[countryname] = dataf
 
 #%%
-for countryname, dataf in dfs.items():
-    print(f"{countryname}: {dataf.shape}")
-    dataf.to_parquet(f"../20_intermediate_files/W1_countries/{countryname}.parquet")
+# for countryname, dataf in dfs.items():
+#     print(f"{countryname}: {dataf.shape}")
+#     dataf.to_parquet(f"../20_intermediate_files/W1_countries/{countryname}.parquet")
 
 #%%
-
 all_to_drop = set()
 for x in w1_to_drop_per_country.values():
     all_to_drop.update(set(x))
 
-df.drop(all_to_drop, axis=1).to_parquet("../20_intermediate_files/W1_countries/ALLCOUNTRIES.parquet")
+# df.drop(all_to_drop, axis=1).to_parquet("../20_intermediate_files/W1_countries/ALLCOUNTRIES.parquet")
+
+
+######################################### RUN HERE LATER ###########################################
+#%%
+# to_rename = [x for x in df.columns if x.startswith("q")]
+# renaming = {x:q1num_to_custom[x] for x in to_rename}
+# df = df.rename(columns=renaming)
