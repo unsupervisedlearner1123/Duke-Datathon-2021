@@ -26,7 +26,9 @@ imp_cols = imp_vars[imp_vars["ABS1_Coding_name"] != "na"]["ABS1_Coding_name"].to
 #%%
 # remove duplicate columns
 kickout = ["se004", "country", "se002", "se003a", "se005"]
+addto = ['se006','se008b','se014','se017','relig1','fgnum']
 imp_cols = [x for x in imp_cols if x not in kickout]
+imp_cols.extend(addto)
 
 # %%
 # pick out the important columns
@@ -89,9 +91,6 @@ for flcol in fl_cols:
 
 # %%
 # export to parquet
-# df.to_parquet("../20_intermediate_files/mergeddata.parquet")
+df.to_parquet("../20_intermediate_files/W1mergeddata.parquet")
 # %%
 # done :)
-
-df.income_quintile.value_counts()
-# %%
