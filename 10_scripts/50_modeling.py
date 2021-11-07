@@ -140,7 +140,7 @@ try:
 except KeyError:
     print("qoi029 not found in dataframe")
 
-subset_encoded.to_parquet(f"../20_intermediate_files/W1_countries/qcols_encoded_{COUNTRY}.parquet")
+# subset_encoded.to_parquet(f"../20_intermediate_files/W1_countries/qcols_encoded_{COUNTRY}.parquet")
 
 #%%
 
@@ -247,3 +247,25 @@ for FACTOR_TO_PREDICT in range(3):
     ax[1, FACTOR_TO_PREDICT].set_title("Decision Tree")
     ax[0, 0].set_xlabel("Ground Truth")
     ax[0, 0].set_ylabel("Prediction")
+
+#%%
+import statsmodels.formula.api as smf
+
+FACTOR_TO_PREDICT = 1
+df_for_sm = (
+    df[predictors]
+    .pipe(start_pipeline)
+    .pipe(encode_categoricals, columns=predictors, refit=True)
+    .pipe(simple_impute_numeric, predictors, True, na_value=-1)
+)
+
+y = fa.transform(subset_encoded)[:, FACTOR_TO_PREDICT]
+
+df_for_sm = pd.concat([df_for_sm, pd.DataFrame(y)], axis=1).rename({0: "y"}, axis=1)
+
+model = smf.ols(
+    formula="y ~ urban_rural + gender + agegroup + married + education + income_quintile + religion + socialstatus",
+    data=df_for_sm,
+)
+result = model.fit()
+print(result.summary())
