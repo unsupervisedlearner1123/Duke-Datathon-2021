@@ -144,8 +144,9 @@ pca.fit(subset_encoded)
 plt.plot(pca.explained_variance_ratio_[:15])
 
 #%%
+NFAC = 3
 # fa = FactorAnalysis(n_components=4, rotation="varimax")
-fa = FactorAnalysis(n_components=3)
+fa = FactorAnalysis(n_components=NFAC)
 preds = fa.fit_transform(subset_encoded)
 
 #%%
@@ -157,6 +158,21 @@ sns.heatmap(
     # annot=True,
     ax=ax,
 )
+
+#%%
+for factor in range(NFAC):
+    _s = f' Factor #{factor} '
+    print(f"{_s:=^80}")
+    highest = fa.components_[factor].argsort()[-3:]
+    lowest = fa.components_[factor].argsort()[:3]
+
+    print(f"{' Most Positive Loadings ':-^80}")
+    for idx in highest[::-1]:
+        print(f" - {custom_to_q1_text.get(subset_encoded.columns[idx])}")
+    print(f"{' Most Negative Loadings ':-^80}")
+    for idx in lowest[::-1]:
+        print(f" - {custom_to_q1_text.get(subset_encoded.columns[idx])}")
+    print()
 
 
 #%%
