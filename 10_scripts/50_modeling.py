@@ -172,14 +172,14 @@ preds = fa.fit_transform(subset_encoded)
 #%%
 
 
-fig, ax = plt.subplots(figsize=(15, 8))
+fig, ax = plt.subplots(figsize=(15, 5))
 sns.heatmap(
     pd.DataFrame(fa.components_, columns=subset_encoded.columns),
     # annot=True,
     ax=ax,
 )
 
-plt.savefig(f"../30_results/chinamainland_w1.svg")
+plt.savefig(f"../30_results/chinamainland_w1.png", dpi=300, facecolor="w")
 #%%
 with open(f"../30_results/W1/{COUNTRY}.txt", "a") as f:
     for factor in range(NFAC):
