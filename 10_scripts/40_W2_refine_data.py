@@ -4,11 +4,6 @@ import numpy as np
 import os
 from data_focus import q2num_to_custom
 
-
-##################################################################################################
-################################# WHEN COMPLETE, RUN RENAME BELOW ################################
-##################################################################################################
-
 # %%
 # read in the data
 df = pd.read_parquet("../20_intermediate_files/W2focusdata.parquet")
@@ -66,12 +61,15 @@ w2_to_drop_per_country = {
 #%%
 dfs = {country: df.query("country == @country") for country in df['country'].unique()}
 
+to_rename = [x for x in df.columns if x.startswith("q")]
+
 for countryname, dataf in dfs.items():
     print(f"Dropping cols in {countryname}")
     dataf = dataf.drop(w2_to_drop_per_country.get(countryname, []), axis=1)
+    renaming = {x: q2num_to_custom[x] for x in to_rename}
+    dataf = dataf.rename(columns=renaming)
     dfs[countryname] = dataf
 
-#%%
 for countryname, dataf in dfs.items():
     print(f"{countryname}: {dataf.shape}")
     dataf.to_parquet(f"../20_intermediate_files/W2_countries/{countryname}.parquet")
@@ -81,12 +79,7 @@ for countryname, dataf in dfs.items():
 all_to_drop = set()
 for x in w2_to_drop_per_country.values():
     all_to_drop.update(set(x))
-
-df.drop(all_to_drop, axis=1).to_parquet("../20_intermediate_files/W2_countries/ALLCOUNTRIES.parquet")
-
-
-######################################### RUN HERE LATER ###########################################
-#%%
-# to_rename = [x for x in df.columns if x.startswith("q")]
-# renaming = {x:q2num_to_custom[x] for x in to_rename}
-# df = df.rename(columns=renaming)
+df = df.drop(all_to_drop, axis=1)
+renaming = {x: q2num_to_custom[x] for x in to_rename}
+df = df.rename(columns=renaming)
+df.to_parquet("../20_intermediate_files/W2_countries/ALLCOUNTRIES.parquet")
