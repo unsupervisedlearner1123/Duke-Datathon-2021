@@ -9,6 +9,14 @@ w2_to_drop_per_country = {
     "Mainland China": ["q18", "q42", "q54", "q80", "q83", "q99"],
 }
 
+w1_to_drop_per_country = {
+    "Hong Kong": ["q115", "q077", "q057", "q017", "q013"],
+    "Korea": ["q017", "q031", "q074"],
+    "Mainland China": ["q125", "q121", "q115", "q104", "q077", "q074", "q062", "q057", "q031", "q017"],
+    "Taiwan": ["q057"],
+
+}
+
 w1_vars_to_drop = [
     "language",
     "generations",
@@ -16,6 +24,7 @@ w1_vars_to_drop = [
     "num_formal_group",
     "religion2",
     "q031",
+    "age",
 ]
 w2_vars_to_drop = ["language", "generations", "q42", "maritalstatus", "num_formal_group"]
 # TODO: create "married" variable in W2
