@@ -11,7 +11,7 @@ We utilize **Factor Analysis (FA)** to uncover latent constructs that manifest i
 In order to help Asian Barometer with its goal of strengthening the intellectual and institutional capacity for research on democracy as well as generating reliable and comparable data, we want to find out how demographic variables are associated with the latent factors uncovered through the FA. If it was possible to predict which population subgroups are highly likely to hold extreme opinions or feel treated unequally, the Hu Fu Center could conduct more in-depth research about which circumstances foster these attitudes. To achieve this goal, we fit a **linear regression model** to regress the latent variables on demographic attributes, which are available without conducting costly surveys.
 
 ## Results
-For most of the countries, the factor analysis is able to estimate interpretable factor loadings for at least one of the three latent dimensions. For the detailed assessment of the results a discussion of the predictive performance of the linear model which regresses the latent factors on demographic characteristics, see the full report file `` or click [HERE]()
+For most of the countries, the factor analysis is able to estimate interpretable factor loadings for at least one of the three latent dimensions. For the detailed assessment of the results a discussion of the predictive performance of the linear model which regresses the latent factors on demographic characteristics, see the full report file `40_docs/Report_final.pdf` or click [HERE](https://github.com/unsupervisedlearner1123/Duke-Datathon-2021/raw/main/40_docs/Report_final.pdf)
 
 
 ## Team Members
