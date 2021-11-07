@@ -62,3 +62,9 @@ custom_to_q2num = {q1num_to_custom.get(key): key for key, _ in w1w2_matching.ite
 q2num_to_custom = {val: key for key, val in custom_to_q2num.items()}
 
 # %%
+
+# %%
+import json
+with open("../20_intermediate_files/w1_questions.json", "w") as write_file:
+    json.dump(q1num_to_custom, write_file)
+# %%
