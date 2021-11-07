@@ -31,8 +31,22 @@ subset_encoded = pd.DataFrame(subset_encoded, columns=subset.columns)
 #%%
 from sklearn.decomposition import FactorAnalysis
 
+logliks = []
+for ncomp in range(2, 10):
+    fa = FactorAnalysis(n_components=ncomp)
+    fa.fit(subset_encoded)
+    logliks.append(fa.score(subset_encoded))
+
+#%%
+import numpy as np
+plt.plot(range(2, 10), logliks)
+
+
+#%%
 fa = FactorAnalysis(n_components=3)
 preds = fa.fit_transform(subset_encoded)
 
 #%%
 sns.heatmap(pd.DataFrame(fa.components_, columns=subset_encoded.columns).T, annot=True)
+
+#%%
