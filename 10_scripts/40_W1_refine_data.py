@@ -19,6 +19,8 @@ w1_vars_to_drop = [
     "religion2",
     "q031",
     "age",
+    "educationyear",
+    "yrsurvey",
 ]
 
 w1_to_drop_per_country = {
