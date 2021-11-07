@@ -11,6 +11,23 @@ df = pd.read_parquet("../20_intermediate_files/W2focusdata.parquet")
 # %%
 df = df[~df.country.isin(["Cambodia", "Malaysia", "Indonesia", "Singapore", "Vietnam"])]
 
+#%%
+# drop rows with no ordinal response as N/A for consistency with W1
+replace_with_NA = [
+    "Decline to answer",
+    "Can’t choose",
+    "No answer",
+    "Do not understand the question",
+    "Don't understand",
+    "No answer or can't understand",
+    97,
+    98,
+    99,
+]
+
+for rep in replace_with_NA:
+    df = df.replace(rep, np.nan)
+
 # %%
 # rename religion to religion_code
 religion_w1w2_mapper = {
@@ -46,9 +63,29 @@ religion_w1w2_mapper = {
     "Shia": "Islam",
 }
 df.religion = df.religion.map(religion_w1w2_mapper)
+# %%
+# create married category according to W1
+df["married"] = df["maritalstatus"]
+df["married"] = df["married"].map(
+    {
+        "Married": "Yes",
+        "Widowed": "Yes",
+        "Single/Never married": "No",
+        "Divorced": "Yes",
+        "Living-in as married": "No",
+        "Separated/Married but separated/not living with legal spouse": "Yes",
+    },
+)
 
 # %%
-w2_vars_to_drop = ["language", "generations", "q42", "maritalstatus", "num_formal_group"]
+w2_vars_to_drop = [
+    "language",
+    "generations",
+    "q42",
+    "maritalstatus",
+    "num_formal_group",
+    "age",
+]
 df = df.drop(w2_vars_to_drop, axis=1)
 
 # %%
@@ -59,7 +96,16 @@ w2_to_drop_per_country = {
 }
 
 #%%
-dfs = {country: df.query("country == @country") for country in df['country'].unique()}
+dfs = {country: df.query("country == @country") for country in df["country"].unique()}
+
+
+#%%
+custom_to_q2text = {q1num_to_custom.get(key): w1w2_matching.get(key) for key, _ in w1w2_matching.items()}
+q2text_to_q2num = {v: k for k, v in meta2.column_names_to_labels.items()}
+q2num_to_q2text = {val: key for key, val in q2text_to_q2num.items()}
+
+
+
 
 to_rename = [x for x in df.columns if x.startswith("q")]
 
