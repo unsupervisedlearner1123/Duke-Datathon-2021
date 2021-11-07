@@ -21,8 +21,15 @@ matplotlib_inline.backend_inline.set_matplotlib_formats("svg")
 
 
 #%%
-COUNTRY = "Mainland China"
+COUNTRY = "Thailand"
 df = pd.read_parquet(f"../20_intermediate_files/W1_countries/{COUNTRY}.parquet")
+
+with open(f"../30_results/W1/{COUNTRY}.txt", "w") as f:
+    _s = f" {COUNTRY} "
+    f.write("#"*80 + "\n")
+    f.write(f"{_s:#^80}" + "\n")
+    f.write("#"*80 + "\n")
+    f.write("\n")
 
 #%%
 q_cols = [col for col in df.columns if col.startswith("q")]
@@ -173,19 +180,27 @@ sns.heatmap(
 )
 
 #%%
-for factor in range(NFAC):
-    _s = f" Factor #{factor} "
-    print(f"{_s:=^80}")
-    highest = fa.components_[factor].argsort()[-5:]
-    lowest = fa.components_[factor].argsort()[:5]
+with open(f"../30_results/W1/{COUNTRY}.txt", "a") as f:
+    for factor in range(NFAC):
+        _s = f" Factor #{factor} "
+        print(f"{_s:=^80}")
+        f.write(f"{_s:=^80}" + "\n")
 
-    print(f"{' Most Positive Loadings ':-^80}")
-    for idx in highest[::-1]:
-        print(f" - {custom_to_q1_text.get(subset_encoded.columns[idx])}")
-    print(f"{' Most Negative Loadings ':-^80}")
-    for idx in lowest[::-1]:
-        print(f" - {custom_to_q1_text.get(subset_encoded.columns[idx])}")
-    print()
+        highest = fa.components_[factor].argsort()[-5:]
+        lowest = fa.components_[factor].argsort()[:5]
+
+        print(f"{' Most Positive Loadings ':-^80}")
+        f.write(f"{' Most Positive Loadings ':-^80}" + "\n")
+        for idx in highest[::-1]:
+            print(f" - {custom_to_q1_text.get(subset_encoded.columns[idx])}")
+            f.write(f" - {custom_to_q1_text.get(subset_encoded.columns[idx])}" + "\n")
+        print(f"{' Most Negative Loadings ':-^80}")
+        f.write(f"{' Most Negative Loadings ':-^80}" + "\n")
+        for idx in lowest[::-1]:
+            print(f" - {custom_to_q1_text.get(subset_encoded.columns[idx])}")
+            f.write(f" - {custom_to_q1_text.get(subset_encoded.columns[idx])}" + "\n")
+        print()
+        f.write("\n")
 
 
 #%%
@@ -251,21 +266,30 @@ for FACTOR_TO_PREDICT in range(3):
 #%%
 import statsmodels.formula.api as smf
 
-FACTOR_TO_PREDICT = 1
-df_for_sm = (
-    df[predictors]
-    .pipe(start_pipeline)
-    .pipe(encode_categoricals, columns=predictors, refit=True)
-    .pipe(simple_impute_numeric, predictors, True, na_value=-1)
-)
+# FACTOR_TO_PREDICT = 1
+for FACTOR_TO_PREDICT in range(3):
+    df_for_sm = (
+        df[predictors]
+        .pipe(start_pipeline)
+        .pipe(encode_categoricals, columns=predictors, refit=True)
+        .pipe(simple_impute_numeric, predictors, True, na_value=-1)
+    )
 
-y = fa.transform(subset_encoded)[:, FACTOR_TO_PREDICT]
+    y = fa.transform(subset_encoded)[:, FACTOR_TO_PREDICT]
 
-df_for_sm = pd.concat([df_for_sm, pd.DataFrame(y)], axis=1).rename({0: "y"}, axis=1)
+    df_for_sm = pd.concat([df_for_sm, pd.DataFrame(y)], axis=1).rename({0: f"factor_{FACTOR_TO_PREDICT}"}, axis=1)
 
-model = smf.ols(
-    formula="y ~ urban_rural + gender + agegroup + married + education + income_quintile + religion + socialstatus",
-    data=df_for_sm,
-)
-result = model.fit()
-print(result.summary())
+    model = smf.ols(
+        formula=f"factor_{FACTOR_TO_PREDICT} ~ urban_rural + gender + agegroup + married + education + income_quintile + religion + socialstatus",
+        data=df_for_sm,
+    )
+    result = model.fit()
+    print(result.summary())
+
+    with open(f"../30_results/W1/{COUNTRY}.txt", "a") as f:
+        f.write("\n")
+        _s = f' Predicting Factor #{FACTOR_TO_PREDICT} '
+        f.write(f"{_s:=^80}")
+        f.write(result.summary().as_text())
+        f.write("\n")
+

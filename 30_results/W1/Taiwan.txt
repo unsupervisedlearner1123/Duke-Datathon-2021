@@ -1,0 +1,145 @@
+################################################################################
+#################################### Taiwan ####################################
+################################################################################
+
+================================== Factor #0 ===================================
+---------------------------- Most Positive Loadings ----------------------------
+ - How much impact do you feel government policies have on your daily life?
+ - How interested would you say you are interested in politics?
+ - I have the ability to participate in politics
+ - anyone you know personally witnessed an act of corruption?
+ - As for your own family, how do you rate your economic situation today?
+---------------------------- Most Negative Loadings ----------------------------
+ - How much trust do you have in local government?
+ - You can generally trust the people who run our government to do what is right
+ - Government leaders are like the head of a family; we should all follow their decisions
+ - How much trust do you have in the national government?
+ - How satisfied or dissatisfied are you with the current government?
+
+================================== Factor #1 ===================================
+---------------------------- Most Positive Loadings ----------------------------
+ - We should get rid of parliament and elections and have a strong leader decide things
+ - choose between democracy and economic development?
+ - The military should come in to govern the country
+ - If people have too many different ways of thinking, society will be chaotic
+ - If we have political leaders who are morally upright, we can let them decide everything
+---------------------------- Most Negative Loadings ----------------------------
+ - You can join any organization you like- is better than before?
+ - How would you compare the current economic condition of your family with what it was five years ago?
+ - As for your own family, how do you rate your economic situation today?
+ - What do you think the economic situation of your family will be five years from now?
+ - What do you think will be the state of our country's economic condition five years from now?
+
+================================== Factor #2 ===================================
+---------------------------- Most Positive Loadings ----------------------------
+ - If we have political leaders who are morally upright, we can let them decide everything
+ - contacted elected legislative representatives at any level?
+ - If people have too many different ways of thinking, society will be chaotic
+ - How interested would you say you are interested in politics?
+ - If the government is constantly checked by the legislature, it cannot possibly accomplish great things
+---------------------------- Most Negative Loadings ----------------------------
+ - The military should come in to govern the country
+ - How much trust do you have in the police?
+ - How much trust do you have in the election commission?
+ - How much trust do you have in the courts?
+ - How much trust do you have in Parliament?
+
+
+============================= Predicting Factor #0 =============================                            OLS Regression Results                            
+==============================================================================
+Dep. Variable:               factor_0   R-squared:                       0.244
+Model:                            OLS   Adj. R-squared:                  0.240
+Method:                 Least Squares   F-statistic:                     56.74
+Date:                Sun, 07 Nov 2021   Prob (F-statistic):           3.28e-80
+Time:                        06:06:59   Log-Likelihood:                -1699.6
+No. Observations:                1415   AIC:                             3417.
+Df Residuals:                    1406   BIC:                             3464.
+Df Model:                           8                                         
+Covariance Type:            nonrobust                                         
+===================================================================================
+                      coef    std err          t      P>|t|      [0.025      0.975]
+-----------------------------------------------------------------------------------
+Intercept          -0.9072      0.141     -6.417      0.000      -1.184      -0.630
+urban_rural         0.1192      0.054      2.205      0.028       0.013       0.225
+gender             -0.0061      0.044     -0.140      0.889      -0.092       0.080
+agegroup           -0.0310      0.011     -2.792      0.005      -0.053      -0.009
+married             0.1553      0.062      2.516      0.012       0.034       0.276
+education           0.1559      0.012     13.310      0.000       0.133       0.179
+income_quintile    -0.0190      0.014     -1.377      0.169      -0.046       0.008
+religion            0.0046      0.009      0.508      0.611      -0.013       0.022
+socialstatus       -0.0069      0.025     -0.272      0.785      -0.057       0.043
+==============================================================================
+Omnibus:                       13.905   Durbin-Watson:                   2.085
+Prob(Omnibus):                  0.001   Jarque-Bera (JB):               17.520
+Skew:                           0.138   Prob(JB):                     0.000157
+Kurtosis:                       3.470   Cond. No.                         62.9
+==============================================================================
+
+Notes:
+[1] Standard Errors assume that the covariance matrix of the errors is correctly specified.
+
+============================= Predicting Factor #1 =============================                            OLS Regression Results                            
+==============================================================================
+Dep. Variable:               factor_1   R-squared:                       0.158
+Model:                            OLS   Adj. R-squared:                  0.154
+Method:                 Least Squares   F-statistic:                     33.06
+Date:                Sun, 07 Nov 2021   Prob (F-statistic):           5.55e-48
+Time:                        06:06:59   Log-Likelihood:                -1716.6
+No. Observations:                1415   AIC:                             3451.
+Df Residuals:                    1406   BIC:                             3499.
+Df Model:                           8                                         
+Covariance Type:            nonrobust                                         
+===================================================================================
+                      coef    std err          t      P>|t|      [0.025      0.975]
+-----------------------------------------------------------------------------------
+Intercept           0.6157      0.143      4.303      0.000       0.335       0.896
+urban_rural        -0.0156      0.055     -0.285      0.776      -0.123       0.092
+gender             -0.2574      0.044     -5.791      0.000      -0.345      -0.170
+agegroup            0.0063      0.011      0.563      0.574      -0.016       0.028
+married             0.1363      0.062      2.182      0.029       0.014       0.259
+education          -0.0722      0.012     -6.094      0.000      -0.095      -0.049
+income_quintile     0.0268      0.014      1.921      0.055      -0.001       0.054
+religion           -0.0139      0.009     -1.526      0.127      -0.032       0.004
+socialstatus       -0.1413      0.026     -5.496      0.000      -0.192      -0.091
+==============================================================================
+Omnibus:                        3.653   Durbin-Watson:                   1.972
+Prob(Omnibus):                  0.161   Jarque-Bera (JB):                3.536
+Skew:                           0.109   Prob(JB):                        0.171
+Kurtosis:                       3.111   Cond. No.                         62.9
+==============================================================================
+
+Notes:
+[1] Standard Errors assume that the covariance matrix of the errors is correctly specified.
+
+============================= Predicting Factor #2 =============================                            OLS Regression Results                            
+==============================================================================
+Dep. Variable:               factor_2   R-squared:                       0.042
+Model:                            OLS   Adj. R-squared:                  0.037
+Method:                 Least Squares   F-statistic:                     7.760
+Date:                Sun, 07 Nov 2021   Prob (F-statistic):           3.13e-10
+Time:                        06:06:59   Log-Likelihood:                -1669.6
+No. Observations:                1415   AIC:                             3357.
+Df Residuals:                    1406   BIC:                             3405.
+Df Model:                           8                                         
+Covariance Type:            nonrobust                                         
+===================================================================================
+                      coef    std err          t      P>|t|      [0.025      0.975]
+-----------------------------------------------------------------------------------
+Intercept          -0.4106      0.138     -2.966      0.003      -0.682      -0.139
+urban_rural         0.0055      0.053      0.104      0.917      -0.098       0.109
+gender              0.1894      0.043      4.406      0.000       0.105       0.274
+agegroup            0.0292      0.011      2.694      0.007       0.008       0.051
+married             0.2161      0.060      3.577      0.000       0.098       0.335
+education           0.0183      0.011      1.596      0.111      -0.004       0.041
+income_quintile    -0.0130      0.014     -0.961      0.337      -0.039       0.014
+religion           -0.0237      0.009     -2.695      0.007      -0.041      -0.006
+socialstatus        0.0144      0.025      0.577      0.564      -0.034       0.063
+==============================================================================
+Omnibus:                      319.040   Durbin-Watson:                   1.930
+Prob(Omnibus):                  0.000   Jarque-Bera (JB):             1170.042
+Skew:                           1.062   Prob(JB):                    8.49e-255
+Kurtosis:                       6.916   Cond. No.                         62.9
+==============================================================================
+
+Notes:
+[1] Standard Errors assume that the covariance matrix of the errors is correctly specified.
