@@ -1,0 +1,145 @@
+################################################################################
+################################ Mainland China ################################
+################################################################################
+
+================================== Factor #0 ===================================
+---------------------------- Most Positive Loadings ----------------------------
+ - Our country should defend our way of life instead of becoming more and more like other countries
+ - The government should maintain ownership of major state-owned enterprises
+ - If the government is constantly checked by the legislature, it cannot possibly accomplish great things
+ - Harmony of the community will be disrupted if people organize lots of groups
+ - When judges decide important cases, they should accept the view of the executive branch
+---------------------------- Most Negative Loadings ----------------------------
+ - How would you compare the current economic condition of your family with what it was a few years ago?
+ - As for your own family, how do you rate your economic situation today?
+ - How much impact do you feel government politics have on your daily life?
+ - How interested would you say you are in politics
+ - How often do you follow news about politics and government
+
+================================== Factor #1 ===================================
+---------------------------- Most Positive Loadings ----------------------------
+ - If the government is constantly checked by the legislature, it cannot possibly accomplish great things
+ - The government should maintain ownership of major state-owned enterprises
+ - When judges decide important cases, they should accept the view of the executive branch
+ - Harmony of the community will be disrupted if people organize lots of groups
+ - Our country should defend our way of life instead of becoming more and more like other countries
+---------------------------- Most Negative Loadings ----------------------------
+ - Trust in television
+ - Trust in local government
+ - Trust in the Courts
+ - Trust in Civil service
+ - Trust in the police
+
+================================== Factor #2 ===================================
+---------------------------- Most Positive Loadings ----------------------------
+ - If people have too many different ways of thinking, society will be chaotic
+ - When one has conflict with a neighbor, the best way to deal with it is to accommodate the other person
+ - A person should not insist on his own opinion if his co-workers disagree with him
+ - You can generally trust the people who run our government to do what is right (HK: Hong Kong government)
+ - For the sake of the national community/society, the individual should be prepared to sacrifice
+---------------------------- Most Negative Loadings ----------------------------
+ - When the country is facing a difficult situation, it is ok for the government to disregard the law in order to deal with the situation
+ - Our country should defend our way of life instead of becoming more and more like other countries
+ - When judges decide important cases, they should accept the view of the executive branch
+ - The government should maintain ownership of major state-owned enterprises
+ - If the government is constantly checked by the legislature, it cannot possibly accomplish great things
+
+
+============================= Predicting Factor #0 =============================                            OLS Regression Results                            
+==============================================================================
+Dep. Variable:               factor_0   R-squared:                       0.113
+Model:                            OLS   Adj. R-squared:                  0.112
+Method:                 Least Squares   F-statistic:                     81.29
+Date:                Sun, 07 Nov 2021   Prob (F-statistic):          5.20e-127
+Time:                        07:19:21   Log-Likelihood:                -6820.9
+No. Observations:                5098   AIC:                         1.366e+04
+Df Residuals:                    5089   BIC:                         1.372e+04
+Df Model:                           8                                         
+Covariance Type:            nonrobust                                         
+===================================================================================
+                      coef    std err          t      P>|t|      [0.025      0.975]
+-----------------------------------------------------------------------------------
+Intercept           0.4667      0.085      5.520      0.000       0.301       0.632
+urban_rural         0.0769      0.034      2.265      0.024       0.010       0.143
+gender             -0.3245      0.026    -12.410      0.000      -0.376      -0.273
+agegroup            0.0601      0.005     11.648      0.000       0.050       0.070
+married            -0.1492      0.050     -2.997      0.003      -0.247      -0.052
+education          -0.0039      0.006     -0.606      0.544      -0.016       0.009
+income_quintile     0.0161      0.011      1.450      0.147      -0.006       0.038
+religion           -0.0713      0.012     -5.739      0.000      -0.096      -0.047
+socialstatus       -0.1444      0.009    -15.840      0.000      -0.162      -0.127
+==============================================================================
+Omnibus:                     1183.276   Durbin-Watson:                   1.253
+Prob(Omnibus):                  0.000   Jarque-Bera (JB):             2380.074
+Skew:                           1.386   Prob(JB):                         0.00
+Kurtosis:                       4.876   Cond. No.                         59.5
+==============================================================================
+
+Notes:
+[1] Standard Errors assume that the covariance matrix of the errors is correctly specified.
+
+============================= Predicting Factor #1 =============================                            OLS Regression Results                            
+==============================================================================
+Dep. Variable:               factor_1   R-squared:                       0.018
+Model:                            OLS   Adj. R-squared:                  0.017
+Method:                 Least Squares   F-statistic:                     11.72
+Date:                Sun, 07 Nov 2021   Prob (F-statistic):           1.16e-16
+Time:                        07:19:23   Log-Likelihood:                -6822.4
+No. Observations:                5098   AIC:                         1.366e+04
+Df Residuals:                    5089   BIC:                         1.372e+04
+Df Model:                           8                                         
+Covariance Type:            nonrobust                                         
+===================================================================================
+                      coef    std err          t      P>|t|      [0.025      0.975]
+-----------------------------------------------------------------------------------
+Intercept           0.3560      0.085      4.209      0.000       0.190       0.522
+urban_rural         0.0483      0.034      1.424      0.155      -0.018       0.115
+gender              0.0331      0.026      1.264      0.206      -0.018       0.084
+agegroup           -0.0322      0.005     -6.238      0.000      -0.042      -0.022
+married            -0.0463      0.050     -0.929      0.353      -0.144       0.051
+education           0.0151      0.006      2.364      0.018       0.003       0.028
+income_quintile    -0.0181      0.011     -1.629      0.103      -0.040       0.004
+religion           -0.0112      0.012     -0.902      0.367      -0.036       0.013
+socialstatus       -0.0494      0.009     -5.413      0.000      -0.067      -0.031
+==============================================================================
+Omnibus:                       26.965   Durbin-Watson:                   1.441
+Prob(Omnibus):                  0.000   Jarque-Bera (JB):               29.778
+Skew:                           0.134   Prob(JB):                     3.42e-07
+Kurtosis:                       3.262   Cond. No.                         59.5
+==============================================================================
+
+Notes:
+[1] Standard Errors assume that the covariance matrix of the errors is correctly specified.
+
+============================= Predicting Factor #2 =============================                            OLS Regression Results                            
+==============================================================================
+Dep. Variable:               factor_2   R-squared:                       0.021
+Model:                            OLS   Adj. R-squared:                  0.019
+Method:                 Least Squares   F-statistic:                     13.37
+Date:                Sun, 07 Nov 2021   Prob (F-statistic):           2.60e-19
+Time:                        07:19:25   Log-Likelihood:                -6233.2
+No. Observations:                5098   AIC:                         1.248e+04
+Df Residuals:                    5089   BIC:                         1.254e+04
+Df Model:                           8                                         
+Covariance Type:            nonrobust                                         
+===================================================================================
+                      coef    std err          t      P>|t|      [0.025      0.975]
+-----------------------------------------------------------------------------------
+Intercept           0.1508      0.075      2.001      0.045       0.003       0.298
+urban_rural         0.0200      0.030      0.661      0.509      -0.039       0.079
+gender              0.0775      0.023      3.326      0.001       0.032       0.123
+agegroup           -0.0291      0.005     -6.340      0.000      -0.038      -0.020
+married            -0.0548      0.044     -1.236      0.216      -0.142       0.032
+education           0.0190      0.006      3.350      0.001       0.008       0.030
+income_quintile     0.0002      0.010      0.020      0.984      -0.019       0.020
+religion           -0.0314      0.011     -2.831      0.005      -0.053      -0.010
+socialstatus        0.0155      0.008      1.905      0.057      -0.000       0.031
+==============================================================================
+Omnibus:                      237.690   Durbin-Watson:                   1.591
+Prob(Omnibus):                  0.000   Jarque-Bera (JB):              723.593
+Skew:                           0.168   Prob(JB):                    7.48e-158
+Kurtosis:                       4.815   Cond. No.                         59.5
+==============================================================================
+
+Notes:
+[1] Standard Errors assume that the covariance matrix of the errors is correctly specified.

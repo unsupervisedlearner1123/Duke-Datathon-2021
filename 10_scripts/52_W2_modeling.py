@@ -8,7 +8,7 @@ import matplotlib_inline
 from sklearn.preprocessing import OrdinalEncoder, OneHotEncoder, MinMaxScaler
 from sklearn.decomposition import FactorAnalysis, PCA
 from sklearn.impute import SimpleImputer, KNNImputer
-from data_focus import q1num_to_custom, custom_to_q1_text
+from data_focus import q2num_to_custom, custom_to_q2text
 from sklearn.preprocessing import OneHotEncoder, MinMaxScaler, OrdinalEncoder
 from sklearn.impute import SimpleImputer
 from sklearn.model_selection import train_test_split
@@ -21,10 +21,12 @@ matplotlib_inline.backend_inline.set_matplotlib_formats("svg")
 
 
 #%%
-COUNTRY = "Thailand"
-df = pd.read_parquet(f"../20_intermediate_files/W1_countries/{COUNTRY}.parquet")
+COUNTRY = "Taiwan"
+df = pd.read_parquet(f"../20_intermediate_files/W2_countries/{COUNTRY}.parquet")
+df = df.drop("temp", axis=1)
+df[['married', 'religion']] = df[['married', 'religion']].astype('category')
 
-with open(f"../30_results/W1/{COUNTRY}.txt", "w") as f:
+with open(f"../30_results/W2/{COUNTRY}.txt", "w") as f:
     _s = f" {COUNTRY} "
     f.write("#"*80 + "\n")
     f.write(f"{_s:#^80}" + "\n")
@@ -36,18 +38,21 @@ q_cols = [col for col in df.columns if col.startswith("q")]
 
 
 #%%
-from ordinal_orders import w1_var_to_order_mapper
+from ordinal_orders import w2_var_to_order_mapper
 
+var_to_order_mapper_qoi = {q2num_to_custom.get(k, k): v for k, v in w2_var_to_order_mapper.items()}
 df
-var_to_order_mapper_qoi = {q1num_to_custom.get(k, k): v for k, v in w1_var_to_order_mapper.items()}
+
+#%%
 
 # for k, v in var_to_order_mapper.items():
-#     print(k, q1num_to_custom.get(k, k), v)
+#     print(k, q2num_to_custom.get(k, k), v)
 
 # Setting the order
 for var, order in var_to_order_mapper_qoi.items():
+    print(var)
     try:
-        df[var] = df[var].cat.reorder_categories(order)
+        df[var] = df[var].cat.set_categories(order)
     except KeyError:
         print(f"{var} not found in dataframe")
 subset = df[q_cols].copy()
@@ -179,9 +184,8 @@ sns.heatmap(
     ax=ax,
 )
 
-plt.savefig(f"../30_results/chinamainland_w1.svg")
 #%%
-with open(f"../30_results/W1/{COUNTRY}.txt", "a") as f:
+with open(f"../30_results/W2/{COUNTRY}.txt", "a") as f:
     for factor in range(NFAC):
         _s = f" Factor #{factor} "
         print(f"{_s:=^80}")
@@ -193,13 +197,13 @@ with open(f"../30_results/W1/{COUNTRY}.txt", "a") as f:
         print(f"{' Most Positive Loadings ':-^80}")
         f.write(f"{' Most Positive Loadings ':-^80}" + "\n")
         for idx in highest[::-1]:
-            print(f" - {custom_to_q1_text.get(subset_encoded.columns[idx])}")
-            f.write(f" - {custom_to_q1_text.get(subset_encoded.columns[idx])}" + "\n")
+            print(f" - {custom_to_q2text.get(subset_encoded.columns[idx])}")
+            f.write(f" - {custom_to_q2text.get(subset_encoded.columns[idx])}" + "\n")
         print(f"{' Most Negative Loadings ':-^80}")
         f.write(f"{' Most Negative Loadings ':-^80}" + "\n")
         for idx in lowest[::-1]:
-            print(f" - {custom_to_q1_text.get(subset_encoded.columns[idx])}")
-            f.write(f" - {custom_to_q1_text.get(subset_encoded.columns[idx])}" + "\n")
+            print(f" - {custom_to_q2text.get(subset_encoded.columns[idx])}")
+            f.write(f" - {custom_to_q2text.get(subset_encoded.columns[idx])}" + "\n")
         print()
         f.write("\n")
 
@@ -287,7 +291,7 @@ for FACTOR_TO_PREDICT in range(3):
     result = model.fit()
     print(result.summary())
 
-    with open(f"../30_results/W1/{COUNTRY}.txt", "a") as f:
+    with open(f"../30_results/W2/{COUNTRY}.txt", "a") as f:
         f.write("\n")
         _s = f' Predicting Factor #{FACTOR_TO_PREDICT} '
         f.write(f"{_s:=^80}")
