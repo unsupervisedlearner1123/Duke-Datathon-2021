@@ -37,13 +37,12 @@ df = pd.concat([df1.iloc[:, :11], df1[imp_cols]], axis=1,)
 for colname, unique_vals in w1_response_mapping.items():
     df[colname] = df[colname].replace(unique_vals)
 
-# %%
 df.rename(w1_column_mapping, axis=1, inplace=True)
 
 # %%
+# clean the columns for data type assignment
 df = df.drop("idnumber", axis=1)
 
-# %%
 df["educationyear"] = (
     df["educationyear"]
     .replace("less than 1 year", 0)
@@ -52,6 +51,7 @@ df["educationyear"] = (
     .astype("float")
 )
 # %%
+# set column data types
 cat_cols = [
     "country",
     "urban_rural",
@@ -61,7 +61,7 @@ cat_cols = [
     "married",
     "education",
     "gender",
-    "income_quantile",
+    "income_quintile",
     "q007",
     "q008",
     "q009",
@@ -81,9 +81,6 @@ cat_cols = [
 
 fl_cols = ["yrsurvey", "age", "educationyear"]
 
-
-#%%
-
 for catcol in cat_cols:
     df[catcol] = df[catcol].astype("category")
 
@@ -91,5 +88,10 @@ for flcol in fl_cols:
     df[flcol] = df[flcol].astype("float")
 
 # %%
-df.to_parquet("../20_intermediate_files/mergeddata.parquet")
+# export to parquet
+# df.to_parquet("../20_intermediate_files/mergeddata.parquet")
+# %%
+# done :)
+
+df.income_quintile.value_counts()
 # %%
