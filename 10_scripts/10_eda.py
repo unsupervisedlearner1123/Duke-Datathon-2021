@@ -1,14 +1,9 @@
 #%%
 import pandas as pd
-import os
-import pyreadstat
 import seaborn as sns
 import matplotlib.pyplot as plt
 
 df = pd.read_parquet("../20_intermediate_files/mergeddata.parquet")
-# df1, meta = pyreadstat.read_sav(
-#     os.path.join("../00_source_data/W1 Merged Data/Wave.1_Data/Merge/Wave1_20170906.sav")
-# )
 
 
 #%%
