@@ -1,6 +1,7 @@
 # %%
 import pandas as pd
 import numpy as np
+import pyreadstat
 import os
 from data_focus import q2num_to_custom
 
@@ -97,10 +98,25 @@ w2_to_drop_per_country = {
 }
 
 #%%
+df1, meta = pyreadstat.read_sav(
+    os.path.join(
+        "../00_source_data/W2 Merged Data/2w-3rd_release_all/merge/Wave2_20170724.sav"
+    )
+)
+#%%
+ordinal_map = dict()
+qs = [x for x in df.columns if x.startswith("q")]
+# for q in qs:
+#     ordinal_map[q] = {i:x for i,x in enumerate(meta.variable_value_labels[q].values())}
+for q in qs:
+    ordinal_map[q] = list(meta.variable_value_labels[q].values())
+
+
+
+#%%
 dfs = {country: df.query("country == @country") for country in df["country"].unique()}
 
 #%%
-
 to_rename = [x for x in df.columns if x.startswith("q")]
 
 for countryname, dataf in dfs.items():
@@ -110,9 +126,9 @@ for countryname, dataf in dfs.items():
     dataf = dataf.rename(columns=renaming)
     dfs[countryname] = dataf
 
-for countryname, dataf in dfs.items():
-    print(f"{countryname}: {dataf.shape}")
-    dataf.to_parquet(f"../20_intermediate_files/W2_countries/{countryname}.parquet")
+# for countryname, dataf in dfs.items():
+#     print(f"{countryname}: {dataf.shape}")
+#     dataf.to_parquet(f"../20_intermediate_files/W2_countries/{countryname}.parquet")
 
 #%%
 
@@ -122,4 +138,12 @@ for x in w2_to_drop_per_country.values():
 df = df.drop(all_to_drop, axis=1)
 renaming = {x: q2num_to_custom[x] for x in to_rename}
 df = df.rename(columns=renaming)
-df.to_parquet("../20_intermediate_files/W2_countries/ALLCOUNTRIES.parquet")
+# df.to_parquet("../20_intermediate_files/W2_countries/ALLCOUNTRIES.parquet")
+
+#%%
+df1, meta = pyreadstat.read_sav(
+    os.path.join(
+        "../00_source_data/W2 Merged Data/2w-3rd_release_all/merge/Wave2_20170724.sav"
+    )
+)
+# %%
