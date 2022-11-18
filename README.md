@@ -1,5 +1,5 @@
 # Duke Datathon 2021 💻💙 <img width=90 align="right" src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e6/Duke_University_logo.svg/1024px-Duke_University_logo.svg.png">  
-### Winning Submission  
+### 👑 Winning Submission 👑  
 
 ## Insights from the Asian Barometer Survey: A Latent Factor Approach
 This is the team repository for the Duke Annual Datathon, 2021. 
